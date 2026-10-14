@@ -1,0 +1,26 @@
+real es1 gen  0 pop mean  +32.7 best  +43.9 center  +35.5 decay 8.90e-04 | 115s
+real es1 gen  1 pop mean  +33.5 best  +42.0 center  +36.7 decay 1.16e-03 | 217s
+real es1 gen  2 pop mean  +27.4 best  +39.6 center  +33.6 decay 1.54e-03 | 351s
+real es1 gen  3 pop mean  +38.5 best  +45.3 center  +43.8 decay 1.42e-03 | 492s
+real es1 gen  4 pop mean  +33.6 best  +41.1 center  +36.9 decay 1.54e-03 | 620s
+real es1 gen  5 pop mean  +38.7 best  +49.8 center  +43.4 decay 1.44e-03 | 749s
+real es1 gen  6 pop mean  +33.4 best  +42.3 center  +41.5 decay 1.38e-03 | 887s
+real es1 gen  7 pop mean  +43.3 best  +48.7 center  +51.5 decay 1.26e-03 | 1027s
+real es1 gen  8 pop mean  +38.1 best  +45.3 center  +44.5 decay 1.39e-03 | 1153s
+real es1 gen  9 pop mean  +37.5 best  +43.2 center  +43.2 decay 1.51e-03 | 1249s
+real es1 gen 10 pop mean  +30.1 best  +37.8 center  +38.6 decay 1.42e-03 | 1338s
+real es1 gen 11 pop mean  +40.5 best  +49.1 center  +47.6 decay 1.21e-03 | 1426s
+real es1 gen 12 pop mean  +36.7 best  +43.9 center  +40.0 decay 1.37e-03 | 1519s
+real es1 gen 13 pop mean  +34.9 best  +41.5 center  +42.6 decay 1.99e-03 | 1615s
+real es1 gen 14 pop mean  +39.2 best  +45.4 center  +48.6 decay 1.60e-03 | 1699s
+real es1 gen 15 pop mean  +43.1 best  +50.4 center  +52.2 decay 1.47e-03 | 1795s
+real es1 gen 16 pop mean  +46.1 best  +51.4 center  +45.8 decay 1.72e-03 | 1879s
+real es1 gen 17 pop mean  +40.4 best  +51.7 center  +47.6 decay 1.85e-03 | 1958s
+real es1 gen 18 pop mean  +35.9 best  +44.4 center  +39.8 decay 1.62e-03 | 2039s
+real es1 gen 19 pop mean  +43.0 best  +49.8 center  +42.7 decay 1.87e-03 | 2112s
+real es1 gen 20 pop mean  +38.0 best  +46.3 center  +37.2 decay 1.87e-03 | 2185s
+real es1 gen 21 pop mean  +45.2 best  +55.8 center  +51.1 decay 1.59e-03 | 2260s
+real es1 gen 22 pop mean  +39.1 best  +46.2 center  +42.8 decay 2.12e-03 | 2333s
+real es1 gen 23 pop mean  +34.9 best  +41.5 center  +44.3 decay 2.54e-03 | 2407s
+real es1 gen 24 pop mean  +33.0 best  +41.7 center  +39.4 decay 2.25e-03 | 2482s
+done

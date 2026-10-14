@@ -15,3 +15,8 @@
 - 大数据与第三方仓库不在本仓库里：`data_annot/`（MaleCNS / FlyWire 注释，见 `repos/drosophila-brain-mlx/tools/fetch_male_cns.sh`）、`ml-cl-audit/data/`（MNIST/CIFAR-100，由 torchvision 下载）、`repos/`（clfly、flybench、drosophila-brain-mlx 的克隆）。
 - 环境：各子目录自建虚拟环境（`uv venv --python 3.13`；`ml-cl-audit` 需要 torch），多进程脚本请设 `OMP_NUM_THREADS=1`。
 - 数据来源：Janelia MaleCNS v1.0（CC BY 4.0）。
+
+## 博客与 skill
+- 博客系列（7 篇，含配图 SVG）：[`blog/`](blog/README.md)；通俗讲解页：`PROJECT_EXPLAINER.html`；最终总结：`FINAL_SUMMARY.md`。
+- 遗忘检验：`fly-foraging/forget/`；元学习重跑：`fly-foraging/meta2/`（逐项结果合并在 `forget/results_all.json`）。
+- 由协议提炼的 skill 链路已独立成仓库：<https://github.com/meiluosi/research-writing-skills>。

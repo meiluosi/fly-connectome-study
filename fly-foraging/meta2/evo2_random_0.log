@@ -1,0 +1,26 @@
+random es0 gen  0 pop mean  +42.3 best  +51.2 center  +49.2 decay 6.61e-04 | 43s
+random es0 gen  1 pop mean  +43.6 best  +48.9 center  +46.4 decay 8.11e-04 | 88s
+random es0 gen  2 pop mean  +42.0 best  +49.6 center  +47.2 decay 8.64e-04 | 224s
+random es0 gen  3 pop mean  +47.7 best  +57.1 center  +54.6 decay 8.19e-04 | 399s
+random es0 gen  4 pop mean  +44.8 best  +54.8 center  +51.7 decay 9.13e-04 | 574s
+random es0 gen  5 pop mean  +46.5 best  +51.2 center  +47.9 decay 1.07e-03 | 722s
+random es0 gen  6 pop mean  +46.5 best  +54.2 center  +45.3 decay 1.26e-03 | 835s
+random es0 gen  7 pop mean  +46.4 best  +53.9 center  +51.8 decay 1.56e-03 | 969s
+random es0 gen  8 pop mean  +48.0 best  +56.1 center  +51.2 decay 1.48e-03 | 1118s
+random es0 gen  9 pop mean  +44.8 best  +49.2 center  +44.2 decay 1.38e-03 | 1268s
+random es0 gen 10 pop mean  +43.7 best  +53.4 center  +48.0 decay 1.97e-03 | 1390s
+random es0 gen 11 pop mean  +45.6 best  +53.7 center  +45.8 decay 1.40e-03 | 1514s
+random es0 gen 12 pop mean  +56.0 best  +64.5 center  +57.8 decay 1.04e-03 | 1654s
+random es0 gen 13 pop mean  +45.9 best  +51.8 center  +49.8 decay 1.35e-03 | 1792s
+random es0 gen 14 pop mean  +44.1 best  +54.4 center  +45.0 decay 1.58e-03 | 1907s
+random es0 gen 15 pop mean  +48.4 best  +54.4 center  +53.1 decay 1.39e-03 | 2024s
+random es0 gen 16 pop mean  +46.2 best  +55.8 center  +44.9 decay 1.46e-03 | 2145s
+random es0 gen 17 pop mean  +44.0 best  +49.8 center  +46.3 decay 1.75e-03 | 2258s
+random es0 gen 18 pop mean  +45.5 best  +58.4 center  +52.2 decay 1.56e-03 | 2348s
+random es0 gen 19 pop mean  +54.1 best  +59.1 center  +53.2 decay 1.59e-03 | 2441s
+random es0 gen 20 pop mean  +45.2 best  +51.0 center  +50.3 decay 1.57e-03 | 2525s
+random es0 gen 21 pop mean  +40.5 best  +48.6 center  +47.5 decay 1.72e-03 | 2627s
+random es0 gen 22 pop mean  +49.2 best  +53.5 center  +50.5 decay 1.23e-03 | 2729s
+random es0 gen 23 pop mean  +53.5 best  +62.8 center  +50.2 decay 1.26e-03 | 2872s
+random es0 gen 24 pop mean  +49.5 best  +57.2 center  +55.7 decay 1.22e-03 | 2989s
+done

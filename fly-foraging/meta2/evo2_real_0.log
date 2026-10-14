@@ -1,0 +1,26 @@
+real es0 gen  0 pop mean  +36.5 best  +43.9 center  +37.7 decay 6.35e-04 | 24s
+real es0 gen  1 pop mean  +33.5 best  +42.4 center  +37.8 decay 8.02e-04 | 54s
+real es0 gen  2 pop mean  +35.1 best  +43.4 center  +33.2 decay 1.01e-03 | 89s
+real es0 gen  3 pop mean  +43.2 best  +50.9 center  +50.7 decay 1.18e-03 | 118s
+real es0 gen  4 pop mean  +37.3 best  +47.4 center  +41.7 decay 1.88e-03 | 148s
+real es0 gen  5 pop mean  +42.5 best  +49.1 center  +44.2 decay 1.91e-03 | 179s
+real es0 gen  6 pop mean  +36.6 best  +44.2 center  +36.7 decay 1.63e-03 | 207s
+real es0 gen  7 pop mean  +43.4 best  +51.9 center  +48.2 decay 1.92e-03 | 234s
+real es0 gen  8 pop mean  +43.8 best  +52.3 center  +47.9 decay 1.85e-03 | 262s
+real es0 gen  9 pop mean  +38.8 best  +45.9 center  +45.9 decay 1.46e-03 | 289s
+real es0 gen 10 pop mean  +37.9 best  +44.2 center  +37.8 decay 1.83e-03 | 316s
+real es0 gen 11 pop mean  +36.2 best  +44.7 center  +43.9 decay 2.05e-03 | 343s
+real es0 gen 12 pop mean  +46.5 best  +57.1 center  +49.3 decay 1.72e-03 | 371s
+real es0 gen 13 pop mean  +39.8 best  +45.8 center  +44.9 decay 1.69e-03 | 398s
+real es0 gen 14 pop mean  +34.4 best  +38.2 center  +33.8 decay 2.19e-03 | 424s
+real es0 gen 15 pop mean  +43.8 best  +50.3 center  +47.1 decay 2.19e-03 | 455s
+real es0 gen 16 pop mean  +39.1 best  +48.3 center  +42.5 decay 1.88e-03 | 482s
+real es0 gen 17 pop mean  +34.6 best  +40.8 center  +41.0 decay 2.08e-03 | 507s
+real es0 gen 18 pop mean  +40.7 best  +49.8 center  +48.5 decay 1.92e-03 | 531s
+real es0 gen 19 pop mean  +49.2 best  +53.8 center  +52.7 decay 1.70e-03 | 579s
+real es0 gen 20 pop mean  +34.1 best  +40.3 center  +37.8 decay 2.28e-03 | 649s
+real es0 gen 21 pop mean  +33.4 best  +44.2 center  +41.8 decay 2.49e-03 | 720s
+real es0 gen 22 pop mean  +40.7 best  +45.3 center  +42.8 decay 2.29e-03 | 769s
+real es0 gen 23 pop mean  +45.5 best  +52.0 center  +45.3 decay 1.83e-03 | 878s
+real es0 gen 24 pop mean  +42.6 best  +47.9 center  +43.7 decay 1.75e-03 | 983s
+done

@@ -1,0 +1,26 @@
+shuffled es0 gen  0 pop mean  +37.5 best  +45.8 center  +38.6 decay 6.85e-04 | 135s
+shuffled es0 gen  1 pop mean  +34.4 best  +41.1 center  +36.1 decay 8.74e-04 | 273s
+shuffled es0 gen  2 pop mean  +35.3 best  +42.9 center  +36.2 decay 1.14e-03 | 392s
+shuffled es0 gen  3 pop mean  +41.9 best  +53.1 center  +44.0 decay 1.25e-03 | 520s
+shuffled es0 gen  4 pop mean  +36.2 best  +43.1 center  +44.9 decay 1.74e-03 | 617s
+shuffled es0 gen  5 pop mean  +42.5 best  +47.0 center  +44.8 decay 1.78e-03 | 704s
+shuffled es0 gen  6 pop mean  +37.8 best  +46.2 center  +40.5 decay 1.59e-03 | 774s
+shuffled es0 gen  7 pop mean  +41.3 best  +50.0 center  +46.6 decay 2.01e-03 | 880s
+shuffled es0 gen  8 pop mean  +43.3 best  +50.5 center  +51.4 decay 1.79e-03 | 985s
+shuffled es0 gen  9 pop mean  +35.7 best  +43.0 center  +43.8 decay 1.67e-03 | 1128s
+shuffled es0 gen 10 pop mean  +37.9 best  +45.3 center  +45.9 decay 2.15e-03 | 1244s
+shuffled es0 gen 11 pop mean  +37.4 best  +42.6 center  +38.8 decay 1.83e-03 | 1389s
+shuffled es0 gen 12 pop mean  +48.2 best  +53.7 center  +52.7 decay 1.34e-03 | 1513s
+shuffled es0 gen 13 pop mean  +39.6 best  +47.2 center  +39.2 decay 1.49e-03 | 1608s
+shuffled es0 gen 14 pop mean  +35.3 best  +41.3 center  +33.2 decay 2.19e-03 | 1685s
+shuffled es0 gen 15 pop mean  +44.2 best  +52.2 center  +52.0 decay 2.52e-03 | 1804s
+shuffled es0 gen 16 pop mean  +38.8 best  +45.4 center  +43.2 decay 2.04e-03 | 1896s
+shuffled es0 gen 17 pop mean  +34.7 best  +40.8 center  +36.1 decay 1.88e-03 | 2016s
+shuffled es0 gen 18 pop mean  +39.5 best  +49.3 center  +45.4 decay 2.02e-03 | 2176s
+shuffled es0 gen 19 pop mean  +47.4 best  +52.2 center  +50.1 decay 2.05e-03 | 2320s
+shuffled es0 gen 20 pop mean  +37.3 best  +45.1 center  +36.4 decay 2.45e-03 | 2524s
+shuffled es0 gen 21 pop mean  +32.3 best  +47.0 center  +42.9 decay 2.61e-03 | 2707s
+shuffled es0 gen 22 pop mean  +39.8 best  +45.9 center  +41.7 decay 2.22e-03 | 2841s
+shuffled es0 gen 23 pop mean  +41.7 best  +48.8 center  +48.9 decay 2.18e-03 | 2876s
+shuffled es0 gen 24 pop mean  +46.1 best  +49.8 center  +44.0 decay 1.76e-03 | 2918s
+done
