@@ -1,0 +1,39 @@
+references ready 378 s
+aco done 415 s
+real R1 7 done 527 s
+real R1 9 done 528 s
+real R3 8 done 528 s
+real R3 7 done 528 s
+real R1 8 done 529 s
+real R2 9 done 588 s
+real R2 7 done 590 s
+real R2 8 done 591 s
+real R3 9 done 664 s
+shuffled R1 9 done 665 s
+shuffled R1 8 done 665 s
+shuffled R1 7 done 666 s
+shuffled R3 7 done 730 s
+shuffled R2 7 done 733 s
+shuffled R3 8 done 788 s
+shuffled R3 9 done 789 s
+random R1 7 done 791 s
+random R1 8 done 791 s
+shuffled R2 8 done 793 s
+shuffled R2 9 done 794 s
+linear R1 7 done 849 s
+random R1 9 done 868 s
+linear R1 8 done 896 s
+linear R1 9 done 913 s
+random R3 7 done 947 s
+random R3 9 done 948 s
+random R3 8 done 948 s
+random R2 7 done 959 s
+linear R3 7 done 1001 s
+linear R3 8 done 1001 s
+linear R3 9 done 1007 s
+random R2 8 done 1011 s
+random R2 9 done 1012 s
+linear R2 7 done 1020 s
+linear R2 8 done 1036 s
+linear R2 9 done 1048 s
+saved

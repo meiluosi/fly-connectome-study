@@ -1,0 +1,7 @@
+val|B1_vanilla|{"lr": 0.0001}|s0 final 0.0102 480.5 s
+val|B1_vanilla|{"lr": 0.001}|s0 final 0.0100 177.0 s
+val|B1_vanilla|{"lr": 0.01}|s0 final 0.0100 142.4 s
+test|B1_vanilla|{"lr": 0.0001}|s0 final 0.0101 191.4 s
+test|B1_vanilla|{"lr": 0.0001}|s1 final 0.0101 609.4 s
+test|B1_vanilla|{"lr": 0.0001}|s2 final 0.0105 198.0 s
+test|B1_vanilla|{"lr": 0.0001}|s3 final 0.0100 1073.7 s

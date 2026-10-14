@@ -1,0 +1,5 @@
+MR random 12 {'delta_0.0005': 0.966, 'delta_0.001': 0.966, 'delta_0.002': 0.967}
+MR random 48 {'delta_0.0005': 0.853, 'delta_0.001': 0.854, 'delta_0.002': 0.855}
+MR similar 12 {'delta_0.0005': 0.94, 'delta_0.001': 0.94, 'delta_0.002': 0.941}
+MR similar 48 {'delta_0.0005': 0.842, 'delta_0.001': 0.843, 'delta_0.002': 0.844}
+done

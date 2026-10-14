@@ -1,0 +1,19 @@
+APL neurons: 2
+APL->KC edges: 4633 mean signed count -42.34837038635873
+37 s {"gain": 1.0, "apl": 1.25, "active": 0.394, "active_min": 0.327, "active_max": 0.468, "jaccard": 0.742, "never": 0.367, "always": 0.263}
+60 s {"gain": 1.0, "apl": 1.5, "active": 0.246, "active_min": 0.212, "active_max": 0.323, "jaccard": 0.66, "never": 0.513, "always": 0.138}
+91 s {"gain": 1.0, "apl": 2, "active": 0.102, "active_min": 0.075, "active_max": 0.151, "jaccard": 0.474, "never": 0.689, "always": 0.041}
+116 s {"gain": 1.0, "apl": 2.5, "active": 0.05, "active_min": 0.025, "active_max": 0.084, "jaccard": 0.393, "never": 0.803, "always": 0.015}
+141 s {"gain": 0.7, "apl": 1.25, "active": 0.208, "active_min": 0.178, "active_max": 0.287, "jaccard": 0.611, "never": 0.545, "always": 0.111}
+166 s {"gain": 0.7, "apl": 1.5, "active": 0.127, "active_min": 0.094, "active_max": 0.179, "jaccard": 0.509, "never": 0.658, "always": 0.055}
+187 s {"gain": 0.7, "apl": 2, "active": 0.056, "active_min": 0.034, "active_max": 0.097, "jaccard": 0.421, "never": 0.802, "always": 0.018}
+214 s {"gain": 0.7, "apl": 2.5, "active": 0.029, "active_min": 0.018, "active_max": 0.057, "jaccard": 0.35, "never": 0.865, "always": 0.005}
+238 s {"gain": 0.5, "apl": 1.25, "active": 0.097, "active_min": 0.07, "active_max": 0.146, "jaccard": 0.5, "never": 0.723, "always": 0.042}
+260 s {"gain": 0.5, "apl": 1.5, "active": 0.062, "active_min": 0.048, "active_max": 0.109, "jaccard": 0.424, "never": 0.784, "always": 0.019}
+285 s {"gain": 0.5, "apl": 2, "active": 0.03, "active_min": 0.017, "active_max": 0.058, "jaccard": 0.378, "never": 0.874, "always": 0.009}
+309 s {"gain": 0.5, "apl": 2.5, "active": 0.014, "active_min": 0.006, "active_max": 0.036, "jaccard": 0.263, "never": 0.929, "always": 0.002}
+335 s {"gain": 0.4, "apl": 1.25, "active": 0.051, "active_min": 0.038, "active_max": 0.082, "jaccard": 0.416, "never": 0.817, "always": 0.017}
+369 s {"gain": 0.4, "apl": 1.5, "active": 0.034, "active_min": 0.021, "active_max": 0.06, "jaccard": 0.388, "never": 0.862, "always": 0.01}
+401 s {"gain": 0.4, "apl": 2, "active": 0.015, "active_min": 0.007, "active_max": 0.034, "jaccard": 0.291, "never": 0.924, "always": 0.002}
+439 s {"gain": 0.4, "apl": 2.5, "active": 0.007, "active_min": 0.001, "active_max": 0.022, "jaccard": 0.246, "never": 0.957, "always": 0.001}
+done

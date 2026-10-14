@@ -1,0 +1,71 @@
+val|B1_vanilla|{"lr": 1e-05}|s0 final 0.0500 60.2 s
+val|B2_ewc|{"lr": 1e-05, "lam": 0.1}|s0 final 0.0500 75.2 s
+val|B2_ewc|{"lr": 1e-05, "lam": 1}|s0 final 0.0500 68.2 s
+val|B2_ewc|{"lr": 1e-05, "lam": 10}|s0 final 0.0500 66.6 s
+val|B2_ewc|{"lr": 1e-05, "lam": 100}|s0 final 0.0500 67.5 s
+val|B2_ewc|{"lr": 1e-05, "lam": 1000.0}|s0 final 0.0500 65.3 s
+val|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s0 final 0.0501 55.7 s
+val|B2_ewc|{"lr": 0.0001, "lam": 0.1}|s0 final 0.0526 53.7 s
+val|B2_ewc|{"lr": 0.001, "lam": 0.1}|s0 final 0.0500 51.4 s
+val|B2_ewc|{"lr": 0.01, "lam": 0.1}|s0 final 0.0500 52.2 s
+val|B3_er200|{"lr": 1e-05, "buffer": 200}|s0 final 0.6205 39.0 s
+val|B3_er1000|{"lr": 1e-05, "buffer": 1000}|s0 final 0.6811 38.0 s
+stage done
+val|B1_vanilla|inter|{"lr": 1e-05}|s0 final 0.0985 40.5 s
+val|B1_vanilla|inter|{"lr": 0.0001}|s0 final 0.0992 36.0 s
+val|B1_vanilla|inter|{"lr": 0.001}|s0 final 0.0992 34.1 s
+val|B1_vanilla|inter|{"lr": 0.01}|s0 final 0.0994 33.5 s
+test|B1_vanilla|inter|{"lr": 0.01}|s0 final 0.0985 40.1 s
+test|B1_vanilla|inter|{"lr": 0.01}|s1 final 0.0984 43.3 s
+test|B1_vanilla|inter|{"lr": 0.01}|s2 final 0.0962 40.4 s
+test|B1_vanilla|inter|{"lr": 0.01}|s3 final 0.0988 41.1 s
+test|B1_vanilla|inter|{"lr": 0.01}|s4 final 0.0979 43.4 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 0.1}|s0 final 0.0984 54.7 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 1}|s0 final 0.0984 55.7 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 10}|s0 final 0.0984 75.5 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 100}|s0 final 0.0984 77.0 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 1000.0}|s0 final 0.0984 79.2 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 10000.0}|s0 final 0.0984 66.9 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 0.1}|s0 final 0.0993 71.9 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 1}|s0 final 0.0993 67.3 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 10}|s0 final 0.0992 85.8 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 100}|s0 final 0.0992 74.0 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 1000.0}|s0 final 0.0989 89.2 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 10000.0}|s0 final 0.0989 96.4 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 0.1}|s0 final 0.0993 107.2 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 1}|s0 final 0.0994 93.5 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 10}|s0 final 0.0993 85.1 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 100}|s0 final 0.0993 77.0 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 1000.0}|s0 final 0.0994 76.8 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 10000.0}|s0 final 0.0995 81.6 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 0.1}|s0 final 0.0989 80.0 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 1}|s0 final 0.0987 83.2 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 10}|s0 final 0.0989 90.5 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 100}|s0 final 0.0989 79.8 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 1000.0}|s0 final 0.0984 74.5 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 10000.0}|s0 final 0.0988 80.3 s
+test|B2_ewc|inter|{"lr": 0.001, "lam": 10000.0}|s0 final 0.0988 83.1 s
+test|B2_ewc|inter|{"lr": 0.001, "lam": 10000.0}|s1 final 0.0987 87.2 s
+test|B2_ewc|inter|{"lr": 0.001, "lam": 10000.0}|s2 final 0.0990 79.1 s
+test|B2_ewc|inter|{"lr": 0.001, "lam": 10000.0}|s3 final 0.0992 79.6 s
+test|B2_ewc|inter|{"lr": 0.001, "lam": 10000.0}|s4 final 0.0990 130.1 s
+val|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s0 final 0.6147 61.5 s
+val|B3_er200|inter|{"lr": 0.0001, "buffer": 200}|s0 final 0.5858 48.7 s
+val|B3_er200|inter|{"lr": 0.001, "buffer": 200}|s0 final 0.5295 46.2 s
+val|B3_er200|inter|{"lr": 0.01, "buffer": 200}|s0 final 0.5368 49.4 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s0 final 0.6262 55.3 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s1 final 0.6128 60.2 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s2 final 0.6143 65.7 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s3 final 0.6121 80.4 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s4 final 0.5956 68.4 s
+val|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s0 final 0.7063 57.8 s
+val|B3_er1000|inter|{"lr": 0.0001, "buffer": 1000}|s0 final 0.7566 48.6 s
+val|B3_er1000|inter|{"lr": 0.001, "buffer": 1000}|s0 final 0.7272 55.3 s
+val|B3_er1000|inter|{"lr": 0.01, "buffer": 1000}|s0 final 0.6895 76.2 s
+test|B3_er1000|inter|{"lr": 0.0001, "buffer": 1000}|s0 final 0.7682 58.5 s
+test|B3_er1000|inter|{"lr": 0.0001, "buffer": 1000}|s1 final 0.7477 56.4 s
+test|B3_er1000|inter|{"lr": 0.0001, "buffer": 1000}|s2 final 0.7532 59.1 s
+test|B3_er1000|inter|{"lr": 0.0001, "buffer": 1000}|s3 final 0.7744 56.4 s
+test|B3_er1000|inter|{"lr": 0.0001, "buffer": 1000}|s4 final 0.7595 49.4 s
+stage done
+BACKPROP_EXT_DONE

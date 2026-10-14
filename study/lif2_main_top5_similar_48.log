@@ -1,0 +1,16 @@
+21 s main top5 similar 48 real 0.03 learn 0.600 forg 0.012
+48 s main top5 similar 48 real 0.05 learn 0.652 forg 0.027
+68 s main top5 similar 48 real 0.08 learn 0.710 forg 0.045
+94 s main top5 similar 48 real 0.12 learn 0.764 forg 0.070
+113 s main top5 similar 48 real 0.2 learn 0.824 forg 0.104
+151 s main top5 similar 48 real 0.3 learn 0.857 forg 0.126
+176 s main top5 similar 48 real 0.5 learn 0.878 forg 0.149
+189 s main top5 similar 48 real 0.8 learn 0.885 forg 0.160
+222 s main top5 similar 48 none 0.003 learn 0.557 forg 0.005
+258 s main top5 similar 48 none 0.005 learn 0.600 forg 0.014
+300 s main top5 similar 48 none 0.008 learn 0.651 forg 0.025
+344 s main top5 similar 48 none 0.012 learn 0.717 forg 0.051
+399 s main top5 similar 48 none 0.02 learn 0.808 forg 0.087
+463 s main top5 similar 48 none 0.03 learn 0.878 forg 0.120
+514 s main top5 similar 48 none 0.05 learn 0.945 forg 0.163
+done

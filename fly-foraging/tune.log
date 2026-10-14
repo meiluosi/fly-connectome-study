@@ -1,0 +1,6 @@
+fly_MB_real            best {'eta': 0.4, 'g_learn': 2.0, 'k_turn': 1.4}  net/world +42.60  | worst +0.40
+fly_linear_valence     best {'eta': 1.0, 'g_learn': 2.0, 'k_turn': 1.4}  net/world +45.00  | worst -0.40
+fly_no_learning        best {'k_turn': 0.45}  net/world +0.80  | worst -2.80
+ants                   best {'rho': 0.01, 'alpha': 3.0}  net/world +201.80  | worst +57.60
+q_learner              best {'alpha': 0.003, 'eps': 0.05}  net/world +4.80  | worst -3.40
+saved

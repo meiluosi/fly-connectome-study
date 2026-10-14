@@ -1,0 +1,21 @@
+# environments, caches, large data and third-party clones (re-creatable; see README)
+.venv/
+**/.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.tmp*
+nohup.out
+data_annot/
+repos/
+ml-cl-audit/data/
+**/cache/*.pkl
+**/results/*.json.bak*
+*.json.bak_lostupdates
+*.bak
+
+# per-chunk result files are consolidated in fly-tsp/v2/results_all.json and fly-tsp/v3/results_all.json
+fly-tsp/v2/results/
+fly-tsp/v3/results/
+fly-tsp/v2/cache/
+fly-tsp/v3/cache/

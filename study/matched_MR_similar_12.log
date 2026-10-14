@@ -1,0 +1,27 @@
+8 s MR similar 12 bounded real 0.03 learn 0.557 forg 0.003
+13 s MR similar 12 bounded real 0.05 learn 0.596 forg 0.010
+20 s MR similar 12 bounded real 0.08 learn 0.644 forg 0.023
+25 s MR similar 12 bounded real 0.12 learn 0.689 forg 0.042
+30 s MR similar 12 bounded real 0.2 learn 0.738 forg 0.048
+36 s MR similar 12 bounded real 0.3 learn 0.765 forg 0.060
+41 s MR similar 12 bounded real 0.5 learn 0.783 forg 0.073
+47 s MR similar 12 bounded real 0.8 learn 0.797 forg 0.087
+70 s MR similar 12 bounded none 0.003 learn 0.533 forg 0.000
+94 s MR similar 12 bounded none 0.005 learn 0.550 forg 0.001
+123 s MR similar 12 bounded none 0.008 learn 0.580 forg 0.005
+154 s MR similar 12 bounded none 0.012 learn 0.622 forg 0.013
+183 s MR similar 12 bounded none 0.02 learn 0.700 forg 0.037
+210 s MR similar 12 bounded none 0.03 learn 0.772 forg 0.059
+234 s MR similar 12 bounded none 0.05 learn 0.865 forg 0.105
+240 s MR similar 12 additive0 real 0.02 learn 0.586 forg 0.000
+246 s MR similar 12 additive0 real 0.05 learn 0.686 forg 0.015
+253 s MR similar 12 additive0 real 0.1 learn 0.760 forg 0.030
+259 s MR similar 12 additive0 real 0.2 learn 0.812 forg 0.073
+266 s MR similar 12 additive0 real 0.4 learn 0.828 forg 0.085
+272 s MR similar 12 additive0 real 0.8 learn 0.828 forg 0.088
+290 s MR similar 12 additive0 none 0.002 learn 0.544 forg 0.003
+310 s MR similar 12 additive0 none 0.004 learn 0.583 forg -0.002
+329 s MR similar 12 additive0 none 0.008 learn 0.667 forg 0.006
+349 s MR similar 12 additive0 none 0.015 learn 0.772 forg 0.024
+369 s MR similar 12 additive0 none 0.03 learn 0.872 forg 0.064
+done

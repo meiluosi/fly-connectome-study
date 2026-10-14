@@ -1,0 +1,67 @@
+annotations  : /Users/meros/Desktop/fly-mb-compartments/repos/drosophila-brain-mlx/data/raw/male_cns/body-annotations-male-cns-v1.0-minconf-0.5.feather
+transmitters : /Users/meros/Desktop/fly-mb-compartments/repos/drosophila-brain-mlx/data/raw/male_cns/body-neurotransmitters-male-cns-v1.0.feather
+connectivity : /Users/meros/Desktop/fly-mb-compartments/repos/drosophila-brain-mlx/data/raw/male_cns/connectome-weights-male-cns-v1.0-minconf-0.5.feather
+out          : /Users/meros/Desktop/fly-mb-compartments/repos/drosophila-brain-mlx/data/pack/male_cns_v1
+
+[nodes]
+  INFO  annotation schema                  ["assignedOlHex1", "assignedOlHex2", "bodyId", "flywireType", "group", "instance", "somaSide", "statusLabel", "superclass", "type", "vfbId", "hemibrainType", "itoleeHl", "supertype", "birthtime", "mancBodyid", "mancGroup", "mancType", "subclass", "synonyms", "class", "rootSide", "somaNeuromere", "trumanHl", "dimorphism", "matchingNotes", "entryNerve", "mancSerial", "mcnsSerial", "serialMotif", "fruDsx", "exitNerve", "receptorType", "somaLocation", "tosomaLocation", "status"]
+  PASS  annotation columns present         missing []
+  PASS  bodyId is an integer column        dtype int64, 211577 rows
+  PASS  bodyId unique over all rows        211577 distinct of 211577
+  PASS  bodyId positive                    min 10001
+  INFO  superclass distribution            ENS 50, ascending_neuron 1846, cb_efferent 4, cb_endocrine 72, cb_intrinsic 32164, cb_motor 107, cb_sensory 4868, cb_sensory_tbc 14, descending_neuron 1314, descending_neuron_tbc 2, efferent_ascending 8, efferent_descending 4, ol_intrinsic 89403, ol_sensory 6098, sensory_ascending 537, sensory_ascending_tbc 2, sensory_descending 12, visual_centrifugal 563, visual_projection 9201, visual_projection_tbc 2, vnc_efferent 94, vnc_endocrine 22, vnc_intrinsic 13161, vnc_motor 708, vnc_sensory 6370, vnc_sensory_tbc 36, vnc_tbc 38
+  PASS  selection non-empty                N = 166700 of 211577 annotated bodies
+  PASS  selected ids strictly ascending    ascending order defines the model index
+  PASS  ids fit int64                      max id 1471062202
+
+[nt]
+  PASS  neurotransmitter columns present   missing []
+  PASS  body unique                        1835518 distinct of 1835518
+  INFO  label distribution                 acetylcholine 104193, dopamine 396, gaba 22196, glutamate 29443, histamine 8024, octopamine 101, serotonin 48, unclear 1671117
+  INFO  nodes without an nt row            178 of 166700
+  PASS  signs are exactly -1/0/+1          excitatory 103720, inhibitory 51371, unsigned 11609 of 166700
+  PASS  some node carries each polarity    both signs present
+
+[edges]
+  INFO  connectivity schema                {"body_pre": "int64", "body_post": "int64", "weight": "int64"}
+  PASS  connectivity columns present       missing []
+  PASS  surviving edge set non-empty       2311 non-empty batches survived the filter
+  INFO  raw row count                      151856684 rows in 2318 record batches
+  INFO  filter accounting                  kept 24469412; dropped 126273746 (endpoint not a selected node), 1113526 (presynaptic transmitter has no sign), 0 (non-positive weight)
+  PASS  filter accounting is exhaustive    24469412 + 126273746 + 1113526 + 0 == 151856684
+  INFO  raw weight range                   max weight 2591
+  PASS  arrays equal length                24469412/24469412/24469412
+  PASS  no NaN/Inf weights                 0 non-finite
+  PASS  weights are exact integers         dtype int64; max |w - round(w)| = 0.0
+  PASS  counts fit int32                   range [-2591, 1439]
+  PASS  pre index in [0, N)                range [0, 166699], N = 166700
+  PASS  post index in [0, N)               range [0, 166699], N = 166700
+  PASS  index space saturated              max index 166699 == N-1 = 166699
+  PASS  sign partition covers all          +14745137 / -9724275 / 0:0
+  INFO  sign distribution                  excitatory 14745137 (60.26%), inhibitory 9724275 (39.74%), zero 0
+  INFO  count magnitude                    |count| min 1, max 2591, mean 4.915, sum 26721930
+  INFO  self-loops                         80 edges with pre == post (kept; Brian2 keeps them too)
+  INFO  duplicate (pre,post) pairs         0 duplicate rows (24469412 distinct pairs of 24469412 rows)
+
+[csr]
+  INFO  parallel edges merged              24469412 rows -> 24469412 unique (pre,post) edges, no duplicates present
+  PASS  row_ptr[0] == 0                    0
+  PASS  row_ptr[N] == E                    24469412 == 24469412
+  PASS  row_ptr non-decreasing             min delta 0
+  PASS  row_ptr fits int32                 E = 24469412 <= 2147483647
+  PASS  destinations in [0, N)             range [0, 166699], N = 166700
+  PASS  destinations strictly ascending per row 0 violations over 24469411 adjacent pairs
+  PASS  CSR->COO reproduces sources        24469412 entries compared elementwise
+  PASS  CSR->COO reproduces (pre,post) set 24469412 (pre,post) keys identical to the aggregated source table
+  PASS  CSR->COO reproduces counts         24469412 signed counts identical to the aggregated source table
+  PASS  sums exact in float64              total |count| = 120260398 < 2**53 = 9007199254740992
+  PASS  total signed count conserved       pack 26721930 == source 26721930
+  PASS  per-neuron in-weight conserved     max |delta| = 0.0 over 166700 neurons
+  PASS  per-neuron out-weight conserved    max |delta| = 0.0 over 166700 neurons
+  PASS  deterministic under input shuffle  rebuilt from a seed-0 row permutation; destinations and counts bit-identical
+  PASS  int32 downcast lossless            row_ptr / destinations / signed_counts all survive int64 -> int32
+
+>>> names sidecar: 166700 rows, content sha256 1764eec4baf783f6...
+
+>>> ALL CHECKS PASSED. pack written: 166700 neurons, 24469412 edges, 197755700 bytes (188.6 MiB)
+    manifest: /Users/meros/Desktop/fly-mb-compartments/repos/drosophila-brain-mlx/data/pack/male_cns_v1/manifest.json

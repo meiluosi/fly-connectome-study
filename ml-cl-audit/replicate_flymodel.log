@@ -1,0 +1,14 @@
+mnist20 seed 0 {'acc_final': 0.7085, 'acc_half': 0.8154, 'mem_loss': 0.0879, 'learn_acc': 0.796} 22 s
+mnist20 seed 1 {'acc_final': 0.7087, 'acc_half': 0.8181, 'mem_loss': 0.0895, 'learn_acc': 0.7978} 47 s
+mnist20 seed 2 {'acc_final': 0.7098, 'acc_half': 0.8173, 'mem_loss': 0.0865, 'learn_acc': 0.7959} 72 s
+mnist20 seed 3 {'acc_final': 0.707, 'acc_half': 0.8217, 'mem_loss': 0.0912, 'learn_acc': 0.7979} 99 s
+mnist20 seed 4 {'acc_final': 0.6985, 'acc_half': 0.8115, 'mem_loss': 0.0912, 'learn_acc': 0.7893} 120 s
+cifar100 seed 0 {'acc_final': 0.3379, 'acc_half': 0.4175, 'mem_loss': 0.13, 'learn_acc': 0.4679} 120 s
+cifar100 seed 1 {'acc_final': 0.3389, 'acc_half': 0.4217, 'mem_loss': 0.1303, 'learn_acc': 0.4692} 257 s
+cifar100 seed 2 {'acc_final': 0.3412, 'acc_half': 0.4221, 'mem_loss': 0.1281, 'learn_acc': 0.4693} 365 s
+cifar100 seed 3 {'acc_final': 0.3407, 'acc_half': 0.4213, 'mem_loss': 0.1307, 'learn_acc': 0.4714} 460 s
+cifar100 seed 4 {'acc_final': 0.3388, 'acc_half': 0.424, 'mem_loss': 0.1313, 'learn_acc': 0.4701} 548 s
+
+PAPER TARGETS: MNIST-20 acc@10 classes 0.86; final ~0.75; mem loss 0.07 | CIFAR-100 final ~0.41
+mnist20 {'acc_final': '0.7065±0.0041', 'acc_half': '0.8168±0.0033', 'mem_loss': '0.0892±0.0018', 'learn_acc': '0.7954±0.0032'}
+cifar100 {'acc_final': '0.3395±0.0012', 'acc_half': '0.4213±0.0021', 'mem_loss': '0.1301±0.0011', 'learn_acc': '0.4696±0.0012'}

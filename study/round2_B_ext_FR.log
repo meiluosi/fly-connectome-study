@@ -1,0 +1,5 @@
+FR random 12 {'delta_0.0005': 0.959, 'delta_0.001': 0.961, 'delta_0.002': 0.961}
+FR random 48 {'delta_0.0005': 0.843, 'delta_0.001': 0.844, 'delta_0.002': 0.844}
+FR similar 12 {'delta_0.0005': 0.928, 'delta_0.001': 0.929, 'delta_0.002': 0.93}
+FR similar 48 {'delta_0.0005': 0.82, 'delta_0.001': 0.821, 'delta_0.002': 0.822}
+done

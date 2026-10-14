@@ -1,0 +1,7 @@
+random 0.005 learn 0.563 forg 0.007
+random 0.01 learn 0.615 forg 0.029
+random 0.02 learn 0.707 forg 0.084
+similar 0.005 learn 0.567 forg 0.008
+similar 0.01 learn 0.621 forg 0.031
+similar 0.02 learn 0.706 forg 0.085
+done

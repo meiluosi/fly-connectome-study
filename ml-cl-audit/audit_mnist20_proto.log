@@ -1,0 +1,46 @@
+val|NCM_euclid|{}|s0 final 0.6024 0.1 s
+test|NCM_euclid|{}|s0 final 0.6008 0.1 s
+val|NCM_cos|{}|s0 final 0.6000 0.1 s
+test|NCM_cos|{}|s0 final 0.5964 0.1 s
+val|ClassSumDot|{}|s0 final 0.3007 0.1 s
+test|ClassSumDot|{}|s0 final 0.2984 0.1 s
+val|SLDA|{"shrink": 0.001}|s0 final 0.7618 0.1 s
+val|SLDA|{"shrink": 0.01}|s0 final 0.7600 0.2 s
+val|SLDA|{"shrink": 0.1}|s0 final 0.7518 0.1 s
+val|SLDA|{"shrink": 1.0}|s0 final 0.7147 0.2 s
+test|SLDA|{"shrink": 0.001}|s0 final 0.7603 0.2 s
+val|Fly_dense_l2|{}|s0 final 0.1418 3.1 s
+test|Fly_dense_l2|{}|s0 final 0.1449 4.3 s
+test|Fly_dense_l2|{}|s1 final 0.1369 3.9 s
+test|Fly_dense_l2|{}|s2 final 0.1394 3.9 s
+test|Fly_dense_l2|{}|s3 final 0.1510 3.6 s
+test|Fly_dense_l2|{}|s4 final 0.1514 4.2 s
+val|Fly_dense_minmax|{}|s0 final 0.0493 3.1 s
+test|Fly_dense_minmax|{}|s0 final 0.0490 4.8 s
+test|Fly_dense_minmax|{}|s1 final 0.0490 4.9 s
+test|Fly_dense_minmax|{}|s2 final 0.0490 4.2 s
+test|Fly_dense_minmax|{}|s3 final 0.0490 4.3 s
+test|Fly_dense_minmax|{}|s4 final 0.0490 5.2 s
+test|Fly_F0|{}|s0 final 0.7085 19.7 s
+test|Fly_F0|{}|s1 final 0.7087 20.4 s
+test|Fly_F0|{}|s2 final 0.7098 18.5 s
+test|Fly_F0|{}|s3 final 0.7070 21.9 s
+test|Fly_F0|{}|s4 final 0.6985 26.6 s
+val|Fly_F1|{"l": 32, "beta": 0.01}|s0 final 0.7113 20.4 s
+val|Fly_F1|{"l": 32, "beta": 0.05}|s0 final 0.6350 20.2 s
+val|Fly_F1|{"l": 32, "beta": 0.2}|s0 final 0.4622 22.9 s
+val|Fly_F1|{"l": 80, "beta": 0.01}|s0 final 0.7153 26.3 s
+val|Fly_F1|{"l": 80, "beta": 0.05}|s0 final 0.6484 27.9 s
+val|Fly_F1|{"l": 80, "beta": 0.2}|s0 final 0.4464 22.6 s
+val|Fly_F1|{"l": 160, "beta": 0.01}|s0 final 0.7097 18.8 s
+val|Fly_F1|{"l": 160, "beta": 0.05}|s0 final 0.6206 22.1 s
+val|Fly_F1|{"l": 160, "beta": 0.2}|s0 final 0.3993 23.4 s
+val|Fly_F1|{"l": 320, "beta": 0.01}|s0 final 0.6862 21.3 s
+val|Fly_F1|{"l": 320, "beta": 0.05}|s0 final 0.5774 26.9 s
+val|Fly_F1|{"l": 320, "beta": 0.2}|s0 final 0.3229 23.8 s
+test|Fly_F1|{"l": 80, "beta": 0.01}|s0 final 0.7125 27.2 s
+test|Fly_F1|{"l": 80, "beta": 0.01}|s1 final 0.7191 32.5 s
+test|Fly_F1|{"l": 80, "beta": 0.01}|s2 final 0.7177 31.1 s
+test|Fly_F1|{"l": 80, "beta": 0.01}|s3 final 0.7170 36.0 s
+test|Fly_F1|{"l": 80, "beta": 0.01}|s4 final 0.7077 25.7 s
+stage done

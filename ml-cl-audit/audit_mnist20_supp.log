@@ -1,0 +1,11 @@
+test|Fly_dense_l2_noclip|{}|s0 final 0.1117 4.7 s
+test|Fly_dense_l2_noclip|{}|s1 final 0.1109 5.1 s
+test|Fly_dense_l2_noclip|{}|s2 final 0.1092 8.1 s
+test|Fly_dense_l2_noclip|{}|s3 final 0.1068 8.3 s
+test|Fly_dense_l2_noclip|{}|s4 final 0.1120 7.8 s
+test|Fly_wta_noclip|{}|s0 final 0.4789 26.8 s
+test|Fly_wta_noclip|{}|s1 final 0.5010 26.9 s
+test|Fly_wta_noclip|{}|s2 final 0.4886 33.4 s
+test|Fly_wta_noclip|{}|s3 final 0.4732 35.2 s
+test|Fly_wta_noclip|{}|s4 final 0.4764 33.0 s
+stage done

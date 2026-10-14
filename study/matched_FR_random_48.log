@@ -1,0 +1,27 @@
+31 s FR random 48 bounded real 0.03 learn 0.570 forg 0.009
+58 s FR random 48 bounded real 0.05 learn 0.616 forg 0.024
+86 s FR random 48 bounded real 0.08 learn 0.665 forg 0.050
+123 s FR random 48 bounded real 0.12 learn 0.710 forg 0.079
+160 s FR random 48 bounded real 0.2 learn 0.756 forg 0.121
+195 s FR random 48 bounded real 0.3 learn 0.786 forg 0.149
+225 s FR random 48 bounded real 0.5 learn 0.805 forg 0.177
+256 s FR random 48 bounded real 0.8 learn 0.813 forg 0.190
+366 s FR random 48 bounded none 0.003 learn 0.541 forg 0.001
+475 s FR random 48 bounded none 0.005 learn 0.574 forg 0.009
+579 s FR random 48 bounded none 0.008 learn 0.621 forg 0.029
+691 s FR random 48 bounded none 0.012 learn 0.670 forg 0.051
+821 s FR random 48 bounded none 0.02 learn 0.762 forg 0.113
+962 s FR random 48 bounded none 0.03 learn 0.833 forg 0.172
+1180 s FR random 48 bounded none 0.05 learn 0.911 forg 0.248
+1231 s FR random 48 additive0 real 0.02 learn 0.601 forg 0.003
+1277 s FR random 48 additive0 real 0.05 learn 0.686 forg 0.032
+1330 s FR random 48 additive0 real 0.1 learn 0.734 forg 0.071
+1378 s FR random 48 additive0 real 0.2 learn 0.758 forg 0.102
+1435 s FR random 48 additive0 real 0.4 learn 0.763 forg 0.112
+1479 s FR random 48 additive0 real 0.8 learn 0.763 forg 0.117
+1696 s FR random 48 additive0 none 0.002 learn 0.558 forg -0.003
+2010 s FR random 48 additive0 none 0.004 learn 0.622 forg 0.000
+2322 s FR random 48 additive0 none 0.008 learn 0.709 forg 0.029
+2408 s FR random 48 additive0 none 0.015 learn 0.783 forg 0.069
+2450 s FR random 48 additive0 none 0.03 learn 0.836 forg 0.108
+done

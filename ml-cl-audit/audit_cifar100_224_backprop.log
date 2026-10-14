@@ -1,0 +1,27 @@
+val|B1_vanilla|{"lr": 0.0001}|s0 final 0.0100 485.3 s
+val|B1_vanilla|{"lr": 0.001}|s0 final 0.0100 176.8 s
+val|B1_vanilla|{"lr": 0.01}|s0 final 0.0100 142.7 s
+test|B1_vanilla|{"lr": 0.0001}|s0 final 0.0100 190.7 s
+test|B1_vanilla|{"lr": 0.0001}|s1 final 0.0101 585.7 s
+test|B1_vanilla|{"lr": 0.0001}|s2 final 0.0100 198.8 s
+test|B1_vanilla|{"lr": 0.0001}|s3 final 0.0101 1065.2 s
+test|B1_vanilla|{"lr": 0.0001}|s4 final 0.0102 212.9 s
+Traceback (most recent call last):
+  File "/Users/meros/Desktop/fly-mb-compartments/ml-cl-audit/audit_run.py", line 35, in <module>
+    best=max(grid,key=lambda hp:cached(f"val|{name}{tag}|{json.dumps(hp)}|s0",lambda:bp_run(meth,hp,0,"val",ep))["final"]); cache[f"best|{name}{tag}"]=best; save()
+  File "/Users/meros/Desktop/fly-mb-compartments/ml-cl-audit/audit_run.py", line 35, in <lambda>
+    best=max(grid,key=lambda hp:cached(f"val|{name}{tag}|{json.dumps(hp)}|s0",lambda:bp_run(meth,hp,0,"val",ep))["final"]); cache[f"best|{name}{tag}"]=best; save()
+                                ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/meros/Desktop/fly-mb-compartments/ml-cl-audit/audit_run.py", line 14, in cached
+    if key not in cache: t0=time.time(); cache[key]=fn(); cache[key]["secs"]=round(time.time()-t0,1); save(); print(key,"final %.4f"%cache[key]["final"] if "final" in cache[key] else "",cache[key]["secs"],"s",flush=True)
+                                                    ~~^^
+  File "/Users/meros/Desktop/fly-mb-compartments/ml-cl-audit/audit_run.py", line 35, in <lambda>
+    best=max(grid,key=lambda hp:cached(f"val|{name}{tag}|{json.dumps(hp)}|s0",lambda:bp_run(meth,hp,0,"val",ep))["final"]); cache[f"best|{name}{tag}"]=best; save()
+                                                                                     ~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/meros/Desktop/fly-mb-compartments/ml-cl-audit/audit_run.py", line 19, in bp_run
+    Xa,ya,Xb,yb=(Xs,ys,Xv,yv) if phase=="val" else (Xtr,ytr,Xte,yte); R,al=P.run_backprop(method,Xa,ya,Xb,yb,tasks,K,hp,seed,epochs=epochs,threads=threads,device=os.environ.get('AUDIT_DEVICE','cpu')); return summ(R,al)
+                                                                           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/meros/Desktop/fly-mb-compartments/ml-cl-audit/cl_backprop.py", line 27, in run_backprop
+    for p,f,a in zip(net.parameters(),F,anchor): p.grad+=lam*f*(p.detach()-a)
+                                                                ~~~~~~~~~~^~
+RuntimeError: Failed to created pipeline state object, error: Error Domain=AGXMetalG16G_B0 Code=2 "Unable to reach MTLCompilerService. The process is unavailable because the compiler is no longer active. Latest invalidation reason: Connection init failed at lookup with error 32 - Broken pipe" UserInfo={NSLocalizedDescription=Unable to reach MTLCompilerService. The process is unavailable because the compiler is no longer active. Latest invalidation reason: Connection init failed at lookup with error 32 - Broken pipe}

@@ -1,0 +1,27 @@
+33 s FR similar 48 bounded real 0.03 learn 0.575 forg 0.014
+61 s FR similar 48 bounded real 0.05 learn 0.619 forg 0.031
+89 s FR similar 48 bounded real 0.08 learn 0.670 forg 0.056
+125 s FR similar 48 bounded real 0.12 learn 0.711 forg 0.081
+162 s FR similar 48 bounded real 0.2 learn 0.756 forg 0.119
+195 s FR similar 48 bounded real 0.3 learn 0.782 forg 0.144
+225 s FR similar 48 bounded real 0.5 learn 0.801 forg 0.170
+255 s FR similar 48 bounded real 0.8 learn 0.807 forg 0.179
+368 s FR similar 48 bounded none 0.003 learn 0.544 forg 0.005
+479 s FR similar 48 bounded none 0.005 learn 0.575 forg 0.009
+586 s FR similar 48 bounded none 0.008 learn 0.619 forg 0.026
+702 s FR similar 48 bounded none 0.012 learn 0.671 forg 0.050
+834 s FR similar 48 bounded none 0.02 learn 0.751 forg 0.101
+985 s FR similar 48 bounded none 0.03 learn 0.822 forg 0.160
+1211 s FR similar 48 bounded none 0.05 learn 0.906 forg 0.244
+1264 s FR similar 48 additive0 real 0.02 learn 0.604 forg 0.007
+1313 s FR similar 48 additive0 real 0.05 learn 0.689 forg 0.037
+1360 s FR similar 48 additive0 real 0.1 learn 0.733 forg 0.075
+1418 s FR similar 48 additive0 real 0.2 learn 0.757 forg 0.100
+1463 s FR similar 48 additive0 real 0.4 learn 0.766 forg 0.115
+1506 s FR similar 48 additive0 real 0.8 learn 0.766 forg 0.117
+1760 s FR similar 48 additive0 none 0.002 learn 0.561 forg 0.000
+2092 s FR similar 48 additive0 none 0.004 learn 0.620 forg 0.003
+2357 s FR similar 48 additive0 none 0.008 learn 0.704 forg 0.030
+2420 s FR similar 48 additive0 none 0.015 learn 0.764 forg 0.061
+2465 s FR similar 48 additive0 none 0.03 learn 0.814 forg 0.097
+done

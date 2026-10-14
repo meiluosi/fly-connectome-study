@@ -1,0 +1,212 @@
+<title>果蝇连接组项目讲解</title>
+<style>
+:root{
+  --bg:#f3f1ec; --surface:#ffffff; --ink:#1b2329; --muted:#5d6a73; --line:#d9d6cd;
+  --blue:#1f6fd0; --orange:#c9501b; --teal:#0b8a84; --grey:#8d98a1; --good:#157a4f; --bad:#b03a28; --soft:#e8eef5;
+  --f-body:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --f-head:"Noto Serif SC","Songti SC","STSong",Georgia,serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12181d; --surface:#1a2229; --ink:#e7edf1; --muted:#9aa8b2; --line:#2c3943;
+  --blue:#5aa5f5; --orange:#f08a5d; --teal:#3cc7bf; --grey:#7c8993; --good:#4cc88f; --bad:#f0806c; --soft:#22303b; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#12181d; --surface:#1a2229; --ink:#e7edf1; --muted:#9aa8b2; --line:#2c3943;
+  --blue:#5aa5f5; --orange:#f08a5d; --teal:#3cc7bf; --grey:#7c8993; --good:#4cc88f; --bad:#f0806c; --soft:#22303b; color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.7;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1{font-family:var(--f-head);font-size:clamp(28px,5vw,40px);line-height:1.25;margin:0 0 8px;text-wrap:balance}
+h2{font-family:var(--f-head);font-size:clamp(21px,3.4vw,26px);margin:0 0 6px;text-wrap:balance}
+h3{font-size:15px;margin:18px 0 4px;color:var(--muted);letter-spacing:.04em}
+p{margin:0 0 10px}
+.lead{font-size:18px;color:var(--ink)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px;min-width:0}
+.callout{background:var(--soft);border-radius:6px;padding:14px 16px;margin:10px 0}
+.callout b{color:var(--ink)}
+.tag{display:inline-block;font-size:12px;letter-spacing:.06em;padding:1px 8px;border-radius:3px;background:var(--soft);color:var(--muted);margin-right:6px}
+.verdict{font-weight:600}
+.chart{overflow-x:auto;margin:10px 0 4px}
+svg text{font-family:var(--f-body);fill:var(--ink)}
+svg .m{fill:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin:2px 0 8px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.cap{font-size:13px;color:var(--muted)}
+ul{margin:6px 0 10px;padding-left:22px} li{margin:2px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:560px}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.tw{overflow-x:auto}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="cap">一份给非专业读者的讲解 · 数据来自项目内的先登记、后运行的实验</p>
+  <h1>我们让真实的果蝇大脑回路做了五件事，结果是：它会学习，但没有比简单办法更强</h1>
+  <p class="lead">下面按“做了什么、为什么这样做、效果如何”依次讲，每一节都有图。最后说清楚哪些结论可以信，哪些不能。</p>
+</header>
+
+<section class="box">
+  <h2>先看全貌</h2>
+  <p><b>起点</b>：科学家已经画出了完整的果蝇大脑连线图（连接组）。其中有一块叫<b>蘑菇体</b>，是果蝇学习气味和奖惩的地方。我们好奇：<b>直接用这个真实的接线图当“学习器”，能不能做出比常见方法更好的东西？</b></p>
+  <p><b>怎么检验</b>：每次都把真实连线，和“把连线打乱”“换成随机的稀疏连线”“换成最简单的线性学习器”放在一起比。如果真实连线有特别之处，它应该赢。每个实验都在运行前写下判定标准并锁定代码（预先登记），跑完后请一个不知道前情的独立审查者挑错。</p>
+  <div class="callout"><b>总结果</b>：在所有能检验的设定里，真实连线<b>没有</b>测出优于随机稀疏连线或简单线性学习器的优势。注意这是“没有证据”，不是“已经证明没有”：有几个实验的设计本身就测不出这种差别（第 4 节会说）。</div>
+</section>
+
+<section class="box">
+  <h2>1. 觅食：它会学习吗？蚁群呢？</h2>
+  <h3>做了什么</h3>
+  <p>搭了一个虚拟世界：不同气味的食物散落各处，气味对应的奖励会在中途<b>突然反转</b>（原来好的变坏）。让果蝇的蘑菇体回路去觅食，和靠“信息素”觅食的蚁群并排比较。这就是网页上可以玩的那个实验台。</p>
+  <h3>为什么这样做</h3>
+  <p>蚁群是经典的“群体智能”。我们想知道：一个带真实学习回路的个体，在会变的世界里，和只靠留下气味轨迹的蚂蚁比，谁更好？还有，把连线换成别的，会不会变差？</p>
+  <h3>效果</h3>
+  <p class="cap">6000 步的平均净奖励，数值越高越好（200 个新世界）。两类世界：气味相似则奖励相同 / 气味相似则奖励相反。</p>
+  <div class="legend"><span><i style="background:var(--blue)"></i>相似气味同奖励</span><span><i style="background:var(--orange)"></i>相似气味奖励相反</span></div>
+  <div class="chart" id="c1"></div>
+  <ul>
+    <li><b>会学习</b>：真实连线比“不学习”多赚 35 到 44。</li>
+    <li><b>真实连线 ≈ 打乱连线</b>：打乱了接线，成绩几乎不变。</li>
+    <li><b>随机稀疏连线反而更好</b>（多约 7 到 8）：说明我们用到的这套真实连线没有优势。</li>
+    <li>线性学习器（不用蘑菇体结构）也差不多，在“奖励相反”的世界里略差。</li>
+  </ul>
+</section>
+
+<section class="box">
+  <h2>2. 果蝇群：20 只果蝇 vs 20 只蚂蚁</h2>
+  <h3>做了什么</h3>
+  <p>让 20 只各带一个真实回路的果蝇同时觅食，并试几种“通信方式”：互不交流、手写的“聚在一起”、手写的“看到同伴吃到就学一点”、以及非生物的“全员广播”。再和 20 只蚂蚁比。</p>
+  <h3>为什么这样做</h3>
+  <p>想知道群体里通信的结构是否重要，以及“带大脑的个体群”相对“只会留信息素的群”有没有优势。</p>
+  <h3>效果</h3>
+  <p class="cap">整个群体的总净奖励（一致世界，100 个新世界）。</p>
+  <div class="chart" id="c2"></div>
+  <ul>
+    <li>独立的果蝇群就比蚁群高（总量 +86）。需要提醒：蚂蚁必须把食物带回巢才计分，这在记账上对蚂蚁不利，比较并不完全对等。</li>
+    <li><b>共享信息越多越好</b>：观察学习 > 独立，广播最高。</li>
+    <li><b>聚在一起反而有害</b>：太拥挤，大家抢同一块食物。</li>
+  </ul>
+</section>
+
+<section class="box">
+  <h2>3. 元学习：让进化来调学习规则</h2>
+  <h3>做了什么 / 为什么</h3>
+  <p>手调的学习规则可能不是最好的。我们用进化策略自动搜索 5 个参数（学习率、遗忘速度、稀疏度等），看进化出来的规则能提升多少，以及对真实连线是否特别有利。</p>
+  <h3>效果</h3>
+  <ul>
+    <li>进化只给出<b>小而稳定</b>的提升（在原分布的世界里约 +4 到 +7），多数没有达到事先设定的“有意义”门槛（+6）。</li>
+    <li>真实连线没有比随机稀疏连线更受益。</li>
+    <li>9 次进化都把“稀疏度”从 5% 降到约 2%，但我们事先预期的“世界变得快时，应该学会遗忘”<b>没有出现</b>。</li>
+  </ul>
+</section>
+
+<section class="box">
+  <h2>4. 旅行商问题：能不能用来做优化？</h2>
+  <h3>做了什么</h3>
+  <p>旅行商问题是“怎样走一圈经过所有城市最短”。蚁群算法是它的经典解法之一。我们把蘑菇体接进蚁群里，让它学“哪些路段更值得走”，一共做了三轮：</p>
+  <ul>
+    <li><b>第一轮</b>：跨实例预训练的蘑菇体当“边的价值”。</li>
+    <li><b>第二轮</b>：改成在一次搜索内在线学习；让 4 只各带不同回路的“异质群体”；不同的通信方式（岛屿群交换精英路线）；加局部搜索 2-opt。</li>
+    <li><b>第三轮</b>：加入“转弯角度”这种信息素和距离都表达不了的上下文，并配一个手写规则做对照。</li>
+  </ul>
+  <h3>为什么这样做</h3>
+  <p>这是个有客观分数（路线长度）的任务，不像觅食那样依赖我们手写的规则。如果真实连线在这里有用，应该看得出来。</p>
+  <h3>效果</h3>
+  <p class="cap">比参考解长多少 %，越低越好（300 个新测试实例）。</p>
+  <div class="legend"><span><i style="background:var(--grey)"></i>普通蚁群（已调参）</span><span><i style="background:var(--blue)"></i>在线学习：真实连线</span><span><i style="background:var(--teal)"></i>在线学习：随机稀疏连线</span><span><i style="background:var(--orange)"></i>去掉信息素</span></div>
+  <div class="chart" id="c3"></div>
+  <ul>
+    <li>在线学习、异质群体、通信方式、局部搜索、转弯上下文：<b>相对调好的蚁群，差距都在 0.5 个百分点以内</b>（预先设定的“无实质差别”界限）。</li>
+    <li><b>信息素非常重要</b>：去掉它，路线差 5 到 10 个百分点；学出来的边价值替代不了它。</li>
+    <li>只让 4 个子蚁群各自为战（不交换）会更差；定期交换最优路线能补回来，但仍不比一个整体蚁群好。</li>
+    <li>聚类式城市分布上，各种学习器都比蚁群好约 0.3 个百分点，但随机稀疏连线一样好，与连线真假无关。</li>
+  </ul>
+  <div class="callout"><b>必须说清的局限</b>：独立审查发现，这里“边的特征”和距离几乎重复（相关 0.85），转弯信息又基本没被学到。所以“真实连线 ≈ 随机连线”在这里是设计的必然，<b>不能当成连线无关的证据</b>。</div>
+</section>
+
+<section class="box">
+  <h2>5. 持续学习：一篇“果蝇启发”论文站得住吗？</h2>
+  <h3>做了什么</h3>
+  <p>持续学习是让模型一类一类地学新东西而不忘旧的。一篇发表的论文（FlyModel）说，用果蝇式的稀疏编码做这件事，优于常见方法。我们<b>不是做新方法，而是审计</b>：用同样的数据，加上公平调参的对手，看结论是否成立。</p>
+  <h3>为什么这样做</h3>
+  <p>“果蝇启发”常被当作卖点。检验它是否在公平比较下仍然成立，比再造一个新模型更有信息量。</p>
+  <h3>效果</h3>
+  <p class="cap">学完全部类别后的最终准确率，越高越好。三个基准：手写数字 MNIST-20、CIFAR-100（简单特征）、CIFAR-100（强特征）。</p>
+  <div class="legend"><span><i style="background:var(--blue)"></i>FlyModel（论文方法）</span><span><i style="background:var(--teal)"></i>SLDA（免回放的简单基线）</span><span><i style="background:var(--grey)"></i>最近类均值</span><span><i style="background:var(--orange)"></i>最佳反向传播基线（EWC/小缓冲回放）</span><span><i style="background:var(--muted)"></i>离线上界</span></div>
+  <div class="chart" id="c4"></div>
+  <ul>
+    <li>FlyModel <b>被一个同样免回放的简单基线 SLDA 超过</b>（三个基准一致，差 0.05 到 0.13）。</li>
+    <li>论文里“稀疏编码比稠密好很多”的说法，大半来自它选的稠密对照本身有缺陷；换成同一个分类器，优势缩到 3 个百分点以内，在强特征上甚至略负。</li>
+    <li>FlyModel <b>确实高于</b>微调、EWC、小缓冲回放（三个基准、两种数据流都成立），但 CIFAR 上这些基线很弱（单遍训练的灾难性遗忘），所以这个“胜利”主要说明基线在这种设定下不行。</li>
+  </ul>
+</section>
+
+<section class="box">
+  <h2>6. 一个更早的问题：隔间到底有没有用？</h2>
+  <p>蘑菇体被分成许多“隔间”。起初我们想知道隔间的划分是不是减少遗忘的原因。预先登记的检验显示：<b>隔间看起来减少遗忘，主要是因为它们学得少</b>（遗忘和学到的量绑在一起）。控制学习量之后，分隔间与不分隔间没有实质差别。这一步也被独立审查推翻过我们最初的说法。</p>
+</section>
+
+<section class="box">
+  <h2>把“真实连线”这条主线单独拿出来看</h2>
+  <p class="cap">每一行是“真实连线 − 对照”的差，看区间是否跨过 0（虚线）。左图是觅食（净奖励，越大越好，正值=真实更好）；右图是旅行商（路线差距百分点，越小越好，所以这里画“对照 − 真实”，正值=真实更好）。</p>
+  <div class="chart" id="c5"></div>
+  <p>多数区间都跨过 0。觅食里“随机稀疏更好”那两行明确偏向对照；也有个别偏向真实（例如奖励相反的世界里真实优于线性），但幅度小或不稳定。整体上，真实连线没有表现出稳定的特殊优势。</p>
+</section>
+
+<section class="box">
+  <h2>这些结论能信多少</h2>
+  <div class="tw"><table>
+    <thead><tr><th>能说</th><th>不能说</th></tr></thead>
+    <tbody>
+      <tr><td>真实回路会学习，比不学习好得多</td><td>真实蘑菇体的连线对计算没有意义（我们的任务是玩具设定，没有建模效价专门化的隔间、多巴胺的时序规则等）</td></tr>
+      <tr><td>在这些任务里，真实连线没有优于随机稀疏连线或简单学习器</td><td>“连线无关”在旅行商里已被证明（那里的设计测不出）</td></tr>
+      <tr><td>FlyModel 在公平比较下被简单免回放基线超过</td><td>FlyModel 无用（它仍高于小缓冲回放和 EWC，也很便宜）</td></tr>
+      <tr><td>群体里共享信息越多越好；聚集有拥挤成本</td><td>果蝇群一定优于蚁群（记账不对等）</td></tr>
+    </tbody></table></div>
+  <h3>如果要真正检验“连线是否有用”，需要什么</h3>
+  <ul>
+    <li><b>阳性对照</b>：先在任务里植入已知依赖“气味组合”的规律，确认回路学习器能检出，再去比较连线真假。</li>
+    <li>让回路的特征<b>不被距离等已有信息重复</b>。</li>
+    <li>用真实的个体差异（不同果蝇个体的连线），而不是随机缺失。</li>
+  </ul>
+  <div class="callout"><b>这个项目的真实价值</b>：不是“发现了果蝇大脑的新用途”，而是一套严谨的做法——预先写下判定标准、锁定代码、独立审查、公开更正自己说过头的结论——以及可复现的工程和一个能玩的交互页面。</div>
+</section>
+</div>
+
+<script>
+(function(){
+function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
+function el(t,a,txt){var e=document.createElementNS('http://www.w3.org/2000/svg',t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+// horizontal grouped bars. groups:[{label, vals:[v..]}], series colors; max for scale
+function bars(id,groups,colors,max,fmt,opt){
+  opt=opt||{}; var root=document.getElementById(id); root.innerHTML='';
+  var W=Math.max(root.clientWidth,360), lw=opt.lw||130, rw=48, bh=14, gap=3, gg=14, rows=groups.length, ns=groups[0].vals.length;
+  var H=rows*(ns*(bh+gap)+gg)+8; var s=el('svg',{width:W,height:H,viewBox:'0 0 '+W+' '+H,role:'img','aria-label':opt.aria||'图表'}); var pw=W-lw-rw;
+  var x0=lw; s.appendChild(el('line',{x1:x0,x2:x0,y1:0,y2:H,stroke:css('--line')}));
+  groups.forEach(function(g,i){var y=i*(ns*(bh+gap)+gg)+4; var t=el('text',{x:lw-8,y:y+bh,'text-anchor':'end','font-size':13},g.label); s.appendChild(t);
+    g.vals.forEach(function(v,j){var w=Math.max(0,v/max*pw); s.appendChild(el('rect',{x:x0,y:y+j*(bh+gap),width:w,height:bh,fill:css(colors[j]),rx:2}));
+      s.appendChild(el('text',{x:x0+w+5,y:y+j*(bh+gap)+bh-3,'font-size':11.5,class:'m'},fmt(v)));});});
+  root.appendChild(s);
+}
+// forest: rows:[{label,m,lo,hi}], zero line, symmetric range
+function forest(svg,x,y,w,rows,range,unit,title){
+  svg.appendChild(el('text',{x:x,y:y-8,'font-size':12.5,'font-weight':600},title));
+  var cx=x+w/2, sc=(w/2)/range; svg.appendChild(el('line',{x1:cx,x2:cx,y1:y,y2:y+rows.length*24,stroke:css('--muted'),'stroke-dasharray':'3 3'}));
+  rows.forEach(function(r,i){var yy=y+i*24+12; svg.appendChild(el('line',{x1:cx+r.lo*sc,x2:cx+r.hi*sc,y1:yy,y2:yy,stroke:css(r.c||'--blue'),'stroke-width':2.5}));
+    svg.appendChild(el('circle',{cx:cx+r.m*sc,cy:yy,r:4.5,fill:css(r.c||'--blue')}));
+    svg.appendChild(el('text',{x:x,y:yy+19,'font-size':11,class:'m'},r.label+'  '+(r.m>0?'+':'')+r.m+unit));});
+  svg.appendChild(el('text',{x:cx-range*sc,y:y+rows.length*24+14,'font-size':10.5,class:'m'},'-'+range)); svg.appendChild(el('text',{x:cx+range*sc,y:y+rows.length*24+14,'font-size':10.5,class:'m','text-anchor':'end'},'+'+range));
+}
+function draw(){
+  var f1=function(v){return '+'+v.toFixed(1)}, p=function(v){return v.toFixed(2)+'%'};
+  bars('c1',[{label:'真实连线',vals:[44.0,35.9]},{label:'打乱连线',vals:[44.4,32.4]},{label:'随机稀疏连线',vals:[50.9,44.1]},{label:'线性学习器',vals:[46.2,31.5]},{label:'不学习',vals:[0.5,0.9]}],['--blue','--orange'],60,f1,{aria:'觅食平均净奖励'});
+  bars('c2',[{label:'独立果蝇群',vals:[274.2]},{label:'手写：聚在一起',vals:[211.0]},{label:'观察学习',vals:[353.5]},{label:'广播（非生物）',vals:[411.6]},{label:'蚁群',vals:[187.9]},{label:'单只果蝇',vals:[42.9]}],['--blue'],450,f1,{lw:140,aria:'果蝇群总净奖励'});
+  bars('c3',[{label:'R1 均匀 50 城',vals:[1.81,1.75,1.73,7.23]},{label:'R2 均匀 100 城',vals:[2.31,2.27,2.20,11.81]},{label:'R3 聚类 50 城',vals:[3.64,3.38,3.39,9.11]}],['--grey','--blue','--teal','--orange'],12.5,p,{lw:110,aria:'旅行商路线差距'});
+  bars('c4',[{label:'MNIST-20',vals:[.707,.760,.601,.622,.872]},{label:'CIFAR 简单特征',vals:[.340,.400,.273,.069,.437]},{label:'CIFAR 强特征',vals:[.508,.639,.533,.162,.677]}],['--blue','--teal','--grey','--orange','--muted'],0.95,function(v){return (100*v).toFixed(0)+'%'},{lw:110,aria:'持续学习最终准确率'});
+  var r=document.getElementById('c5'); r.innerHTML=''; var W=Math.max(r.clientWidth,360), two=W>640, H=two?200:380; var s=el('svg',{width:W,height:H,viewBox:'0 0 '+W+' '+H,role:'img','aria-label':'真实连线与对照的差'});
+  var fw=two?W/2-30:W-30;
+  forest(s,10,22,fw,[{label:'觅食·相同奖励 真实−打乱',m:-0.4,lo:-3.6,hi:2.8},{label:'觅食·相反奖励 真实−打乱',m:3.5,lo:0.0,hi:6.9},{label:'觅食·相同奖励 真实−随机稀疏',m:-6.9,lo:-10.3,hi:-3.6,c:'--bad'},{label:'觅食·相反奖励 真实−随机稀疏',m:-8.3,lo:-12.3,hi:-4.3,c:'--bad'},{label:'觅食·相同奖励 真实−线性',m:-2.2,lo:-5.1,hi:0.8},{label:'觅食·相反奖励 真实−线性',m:4.3,lo:0.8,hi:7.8}],13,'','觅食：净奖励之差');
+  forest(s,two?W/2+10:10,two?22:206,fw,[{label:'R1 随机稀疏−真实',m:-0.03,lo:-0.15,hi:0.09},{label:'R2 随机稀疏−真实',m:-0.07,lo:-0.21,hi:0.06},{label:'R3 随机稀疏−真实',m:0.01,lo:-0.13,hi:0.15},{label:'R1 线性−真实',m:0.05,lo:-0.07,hi:0.18},{label:'R2 线性−真实',m:0.05,lo:-0.09,hi:0.18},{label:'R3 线性−真实',m:0.15,lo:0.03,hi:0.27}],0.4,'','旅行商：路线差距之差（百分点）');
+  r.appendChild(s);
+}
+draw(); var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(draw,150);});
+})();
+</script>

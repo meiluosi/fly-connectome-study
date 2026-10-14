@@ -1,0 +1,33 @@
+10 s FR overlap 0.046 forg 0.1844
+16 s FR overlap 0.049 forg 0.1671
+22 s FR overlap 0.049 forg 0.1737
+27 s FR overlap 0.048 forg 0.1834
+32 s FR overlap 0.049 forg 0.1717
+38 s FR overlap 0.147 forg 0.1533
+44 s FR overlap 0.153 forg 0.1934
+50 s FR overlap 0.149 forg 0.1627
+56 s FR overlap 0.150 forg 0.1660
+62 s FR overlap 0.150 forg 0.1968
+68 s FR overlap 0.252 forg 0.1950
+75 s FR overlap 0.251 forg 0.2000
+83 s FR overlap 0.247 forg 0.1729
+90 s FR overlap 0.249 forg 0.1785
+96 s FR overlap 0.247 forg 0.1896
+102 s FR overlap 0.347 forg 0.1822
+108 s FR overlap 0.348 forg 0.1892
+113 s FR overlap 0.346 forg 0.1864
+119 s FR overlap 0.350 forg 0.1937
+125 s FR overlap 0.346 forg 0.1984
+131 s FR overlap 0.441 forg 0.1819
+137 s FR overlap 0.447 forg 0.1925
+145 s FR overlap 0.445 forg 0.1906
+156 s FR overlap 0.443 forg 0.1908
+/Users/meros/Desktop/fly-mb-compartments/study/core.py:42: RuntimeWarning: invalid value encountered in scalar divide
+  nv=(probe@(c.N*q))[:,gm].mean(); return y*((O@(c.N*q))[:,gm].mean()-nv)/nv
+164 s FR overlap 0.440 forg 0.1759
+173 s FR overlap 0.587 forg 0.1889
+184 s FR overlap 0.590 forg 0.1719
+193 s FR overlap 0.586 forg 0.1801
+206 s FR overlap 0.587 forg 0.1844
+216 s FR overlap 0.586 forg 0.1885
+done

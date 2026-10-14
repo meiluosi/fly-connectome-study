@@ -1,0 +1,8 @@
+R1 ACO best (1.0, 5.0, 0.3) gap 1.84% worst 68.79% 10 s
+R2 ACO best (1.0, 5.0, 0.3) gap 4.84% worst 106.70% 55 s
+R3 ACO best (2.0, 5.0, 0.3) gap 3.99% worst 37.63% 64 s
+real      R1: (lr,kappa)=(0.01, 4.0) gap 2.13% | R2: (lr,kappa)=(0.01, 4.0) gap 2.68% | R3: (lr,kappa)=(0.03, 1.0) gap 3.87% 313 s
+shuffled  R1: (lr,kappa)=(0.01, 1.0) gap 2.42% | R2: (lr,kappa)=(0.1, 1.0) gap 2.84% | R3: (lr,kappa)=(0.1, 4.0) gap 3.54% 635 s
+random    R1: (lr,kappa)=(0.03, 4.0) gap 2.20% | R2: (lr,kappa)=(0.1, 2.0) gap 3.33% | R3: (lr,kappa)=(0.01, 2.0) gap 3.91% 943 s
+linear    R1: (lr,kappa)=(0.3, 2.0) gap 1.84% | R2: (lr,kappa)=(0.1, 1.0) gap 3.58% | R3: (lr,kappa)=(1.0, 1.0) gap 3.78% 1044 s
+saved

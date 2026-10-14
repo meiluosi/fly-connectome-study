@@ -1,0 +1,21 @@
+test|ExpNCM_wta_euc|{}|s0 final 0.6255 30.1 s
+test|ExpNCM_wta_euc|{}|s1 final 0.6254 27.4 s
+test|ExpNCM_wta_euc|{}|s2 final 0.6317 45.9 s
+test|ExpNCM_wta_euc|{}|s3 final 0.6294 87.1 s
+test|ExpNCM_wta_euc|{}|s4 final 0.6301 78.7 s
+test|ExpNCM_wta_cos|{}|s0 final 0.6212 79.0 s
+test|ExpNCM_wta_cos|{}|s1 final 0.6226 96.6 s
+test|ExpNCM_wta_cos|{}|s2 final 0.6267 118.5 s
+test|ExpNCM_wta_cos|{}|s3 final 0.6263 221.5 s
+test|ExpNCM_wta_cos|{}|s4 final 0.6238 169.2 s
+test|ExpNCM_dense_euc|{}|s0 final 0.5920 48.0 s
+test|ExpNCM_dense_euc|{}|s1 final 0.5958 49.4 s
+test|ExpNCM_dense_euc|{}|s2 final 0.5946 49.5 s
+test|ExpNCM_dense_euc|{}|s3 final 0.5959 48.2 s
+test|ExpNCM_dense_euc|{}|s4 final 0.5967 29.5 s
+test|ExpNCM_dense_cos|{}|s0 final 0.5918 37.7 s
+test|ExpNCM_dense_cos|{}|s1 final 0.5957 41.0 s
+test|ExpNCM_dense_cos|{}|s2 final 0.5938 49.9 s
+test|ExpNCM_dense_cos|{}|s3 final 0.5960 49.3 s
+test|ExpNCM_dense_cos|{}|s4 final 0.5969 48.3 s
+stage done

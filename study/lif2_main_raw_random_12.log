@@ -1,0 +1,16 @@
+5 s main raw random 12 real 0.03 learn 0.502 forg 0.002
+9 s main raw random 12 real 0.05 learn 0.513 forg -0.001
+13 s main raw random 12 real 0.08 learn 0.534 forg 0.003
+17 s main raw random 12 real 0.12 learn 0.545 forg -0.001
+22 s main raw random 12 real 0.2 learn 0.564 forg 0.012
+26 s main raw random 12 real 0.3 learn 0.578 forg 0.026
+32 s main raw random 12 real 0.5 learn 0.582 forg 0.033
+36 s main raw random 12 real 0.8 learn 0.582 forg 0.027
+58 s main raw random 12 none 0.003 learn 0.498 forg 0.002
+73 s main raw random 12 none 0.005 learn 0.506 forg 0.002
+95 s main raw random 12 none 0.008 learn 0.516 forg 0.004
+112 s main raw random 12 none 0.012 learn 0.526 forg -0.001
+144 s main raw random 12 none 0.02 learn 0.562 forg 0.021
+169 s main raw random 12 none 0.03 learn 0.599 forg 0.044
+183 s main raw random 12 none 0.05 learn 0.639 forg 0.075
+done

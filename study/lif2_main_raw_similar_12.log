@@ -1,0 +1,16 @@
+4 s main raw similar 12 real 0.03 learn 0.521 forg -0.003
+8 s main raw similar 12 real 0.05 learn 0.537 forg 0.005
+11 s main raw similar 12 real 0.08 learn 0.556 forg 0.017
+16 s main raw similar 12 real 0.12 learn 0.577 forg 0.028
+20 s main raw similar 12 real 0.2 learn 0.583 forg 0.026
+24 s main raw similar 12 real 0.3 learn 0.591 forg 0.028
+29 s main raw similar 12 real 0.5 learn 0.590 forg 0.028
+35 s main raw similar 12 real 0.8 learn 0.590 forg 0.027
+57 s main raw similar 12 none 0.003 learn 0.519 forg 0.004
+72 s main raw similar 12 none 0.005 learn 0.528 forg 0.002
+94 s main raw similar 12 none 0.008 learn 0.538 forg 0.004
+111 s main raw similar 12 none 0.012 learn 0.568 forg 0.020
+142 s main raw similar 12 none 0.02 learn 0.601 forg 0.032
+168 s main raw similar 12 none 0.03 learn 0.636 forg 0.059
+182 s main raw similar 12 none 0.05 learn 0.674 forg 0.084
+done

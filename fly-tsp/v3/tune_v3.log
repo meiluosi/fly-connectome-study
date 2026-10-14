@@ -1,0 +1,15 @@
+R1 TURN-real best (0.1, 4.0) 1.45% worst 2.06% 459 s
+R1 TURN-random best (0.03, 8.0) 1.36% worst 1.90% 851 s
+R1 TURN-linear best (0.03, 2.0) 1.51% worst 4.63% 896 s
+R1 HAND-turn best gamma 0.5 1.88% worst 22.81% 911 s
+R1 ACO (v2 params) tuning gap 1.77%
+R2 TURN-real best (0.03, 4.0) 2.32% worst 3.75% 2380 s
+R2 TURN-random best (0.3, 4.0) 2.09% worst 2.92% 3700 s
+R2 TURN-linear best (0.1, 2.0) 2.55% worst 6.66% 4072 s
+R2 HAND-turn best gamma 0.5 2.44% worst 34.73% 4219 s
+R2 ACO (v2 params) tuning gap 2.31%
+R3 TURN-real best (0.1, 4.0) 3.75% worst 4.19% 4520 s
+R3 TURN-random best (0.1, 16.0) 3.51% worst 4.04% 4827 s
+R3 TURN-linear best (0.1, 8.0) 3.71% worst 4.51% 4863 s
+R3 HAND-turn best gamma 2.0 3.71% worst 16.87% 4876 s
+R3 ACO (v2 params) tuning gap 3.93%

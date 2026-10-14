@@ -1,0 +1,6 @@
+ACO best (alpha,beta,rho) (1.0, 5.0, 0.3) gap 0.67% | worst 36.48% 37 s
+real      best (lr,kappa)=(0.01,4.0) gap 0.82% | worst 1.54% | 259s
+shuffled  best (lr,kappa)=(0.1,2.0) gap 0.86% | worst 1.62% | 458s
+random    best (lr,kappa)=(0.03,4.0) gap 0.67% | worst 1.85% | 656s
+linear    best (lr,kappa)=(3.0,1.0) gap 0.57% | worst 1.31% | 717s
+saved

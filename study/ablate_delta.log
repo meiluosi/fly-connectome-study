@@ -1,0 +1,11 @@
+3 s random delta 0.02 learn 0.878 forg 0.101
+5 s random delta 0.05 learn 0.901 forg 0.106
+8 s random delta 0.1 learn 0.933 forg 0.126
+10 s random delta 0.25 learn 0.976 forg 0.163
+13 s random delta 0.5 learn 0.989 forg 0.196
+16 s similar delta 0.02 learn 0.859 forg 0.101
+19 s similar delta 0.05 learn 0.892 forg 0.113
+22 s similar delta 0.1 learn 0.927 forg 0.133
+24 s similar delta 0.25 learn 0.970 forg 0.183
+27 s similar delta 0.5 learn 0.983 forg 0.221
+done

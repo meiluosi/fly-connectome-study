@@ -1,0 +1,25 @@
+R hemisphere: 2045 KCs, 49 MBONs, 16 compartments, 24091 KC->MBON edges
+
+=== alloc=random, T=12, 100 paired seeds
+  real      {'forg': 0.101, 'cos': 0.326, 'edges': 4327.321, 'opp': 78.533, 'same': 78.017}
+  shuffled  {'forg': 0.1, 'cos': 0.204, 'edges': 4205.72, 'opp': 63.577, 'same': 62.74}
+  none      {'forg': 0.306, 'cos': 0.205, 'edges': 24091.0, 'opp': 1919.296, 'same': 1925.752}
+  real-shuffled cos   : +0.1224 [+0.1105,+0.1339]
+  real-shuffled edges : +121.6008 [+38.4186,+201.7341]
+  real-shuffled opp   : +14.9561 [+9.5632,+20.2619]
+  pooled (3 conds) spearman(opp-shared synapses, forgetting) = 0.721
+  within real    : spearman = 0.359
+  within shuffled: spearman = 0.327
+  paired-diff spearman(d_opp, d_forg) across seeds = 0.481
+
+=== alloc=roundrobin, T=12, 100 paired seeds
+  real      {'forg': 0.089, 'cos': 0.32, 'edges': 4322.385, 'opp': 61.545, 'same': 62.694}
+  shuffled  {'forg': 0.079, 'cos': 0.208, 'edges': 4157.886, 'opp': 44.816, 'same': 46.499}
+  none      {'forg': 0.319, 'cos': 0.205, 'edges': 24091.0, 'opp': 1937.357, 'same': 1933.305}
+  real-shuffled cos   : +0.1124 [+0.1011,+0.1233]
+  real-shuffled edges : +164.4992 [+112.0845,+215.9536]
+  real-shuffled opp   : +16.7286 [+13.3771,+20.0114]
+  pooled (3 conds) spearman(opp-shared synapses, forgetting) = 0.715
+  within real    : spearman = 0.196
+  within shuffled: spearman = 0.267
+  paired-diff spearman(d_opp, d_forg) across seeds = 0.485

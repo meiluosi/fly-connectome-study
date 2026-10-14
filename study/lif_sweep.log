@@ -1,0 +1,18 @@
+APL neurons: 2
+APL->KC edges: 4633 mean signed count -42.34837038635873
+25 s {"gain": 1.0, "apl": 1, "active": 0.672, "active_min": 0.599, "active_max": 0.734, "jaccard": 0.909, "never": 0.222, "always": 0.586}
+50 s {"gain": 1.0, "apl": 3, "active": 0.026, "active_min": 0.012, "active_max": 0.048, "jaccard": 0.3, "never": 0.87, "always": 0.005}
+72 s {"gain": 1.0, "apl": 10, "active": 0.002, "active_min": 0.0, "active_max": 0.007, "jaccard": 0.017, "never": 0.972, "always": 0.0}
+97 s {"gain": 0.7, "apl": 1, "active": 0.342, "active_min": 0.297, "active_max": 0.416, "jaccard": 0.711, "never": 0.42, "always": 0.217}
+119 s {"gain": 0.7, "apl": 3, "active": 0.015, "active_min": 0.005, "active_max": 0.035, "jaccard": 0.278, "never": 0.929, "always": 0.002}
+141 s {"gain": 0.7, "apl": 10, "active": 0.0, "active_min": 0.0, "active_max": 0.001, "jaccard": 0.045, "never": 0.996, "always": 0.0}
+164 s {"gain": 0.5, "apl": 1, "active": 0.153, "active_min": 0.124, "active_max": 0.205, "jaccard": 0.553, "never": 0.614, "always": 0.076}
+191 s {"gain": 0.5, "apl": 3, "active": 0.007, "active_min": 0.002, "active_max": 0.023, "jaccard": 0.246, "never": 0.956, "always": 0.001}
+217 s {"gain": 0.5, "apl": 10, "active": 0.0, "active_min": 0.0, "active_max": 0.0, "jaccard": 0.004, "never": 1.0, "always": 0.0}
+244 s {"gain": 0.4, "apl": 1, "active": 0.078, "active_min": 0.061, "active_max": 0.116, "jaccard": 0.474, "never": 0.75, "always": 0.032}
+269 s {"gain": 0.4, "apl": 3, "active": 0.003, "active_min": 0.0, "active_max": 0.011, "jaccard": 0.217, "never": 0.974, "always": 0.0}
+297 s {"gain": 0.4, "apl": 10, "active": 0.0, "active_min": 0.0, "active_max": 0.0, "jaccard": 0.0, "never": 1.0, "always": 0.0}
+319 s {"gain": 0.3, "apl": 1, "active": 0.022, "active_min": 0.011, "active_max": 0.05, "jaccard": 0.355, "never": 0.901, "always": 0.007}
+341 s {"gain": 0.3, "apl": 3, "active": 0.001, "active_min": 0.0, "active_max": 0.003, "jaccard": 0.06, "never": 0.995, "always": 0.0}
+361 s {"gain": 0.3, "apl": 10, "active": 0.0, "active_min": 0.0, "active_max": 0.0, "jaccard": 0.0, "never": 1.0, "always": 0.0}
+done

@@ -1,0 +1,106 @@
+R1 refs ready 25 s
+R2 refs ready 156 s
+R3 refs ready 184 s
+0 / 2160 276 s
+100 / 2160 1262 s
+200 / 2160 2099 s
+300 / 2160 2330 s
+400 / 2160 2379 s
+500 / 2160 2597 s
+600 / 2160 2936 s
+700 / 2160 3220 s
+800 / 2160 3504 s
+900 / 2160 3776 s
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:38: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((n,n),tmax); eb=eta**be
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:30: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,Wb[cur]*E3[prev,cur]); p=p/p.sum(1,keepdims=True); u=r.random(A)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:38: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((n,n),tmax); eb=eta**be
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:30: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,Wb[cur]*E3[prev,cur]); p=p/p.sum(1,keepdims=True); u=r.random(A)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:38: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((n,n),tmax); eb=eta**be
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:30: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,Wb[cur]*E3[prev,cur]); p=p/p.sum(1,keepdims=True); u=r.random(A)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:38: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((n,n),tmax); eb=eta**be
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:30: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,Wb[cur]*E3[prev,cur]); p=p/p.sum(1,keepdims=True); u=r.random(A)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:38: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((n,n),tmax); eb=eta**be
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:30: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,Wb[cur]*E3[prev,cur]); p=p/p.sum(1,keepdims=True); u=r.random(A)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+1000 / 2160 3835 s
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:38: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((n,n),tmax); eb=eta**be
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:30: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,Wb[cur]*E3[prev,cur]); p=p/p.sum(1,keepdims=True); u=r.random(A)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:38: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((n,n),tmax); eb=eta**be
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:30: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,Wb[cur]*E3[prev,cur]); p=p/p.sum(1,keepdims=True); u=r.random(A)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:38: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((n,n),tmax); eb=eta**be
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:30: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,Wb[cur]*E3[prev,cur]); p=p/p.sum(1,keepdims=True); u=r.random(A)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:38: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((n,n),tmax); eb=eta**be
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:30: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,Wb[cur]*E3[prev,cur]); p=p/p.sum(1,keepdims=True); u=r.random(A)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+1100 / 2160 4005 s
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:38: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((n,n),tmax); eb=eta**be
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/v3core.py:30: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,Wb[cur]*E3[prev,cur]); p=p/p.sum(1,keepdims=True); u=r.random(A)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+1200 / 2160 4132 s
+1300 / 2160 4152 s
+1400 / 2160 4161 s
+1500 / 2160 4239 s
+1600 / 2160 4348 s
+1700 / 2160 4379 s
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:51: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((S,n,n),tmax)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:9: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,W[grp,cur]); p=p/p.sum(1,keepdims=True); u=r.random(n_ants)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:51: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((S,n,n),tmax)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:9: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,W[grp,cur]); p=p/p.sum(1,keepdims=True); u=r.random(n_ants)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:51: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((S,n,n),tmax)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:9: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,W[grp,cur]); p=p/p.sum(1,keepdims=True); u=r.random(n_ants)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:51: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((S,n,n),tmax)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:9: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,W[grp,cur]); p=p/p.sum(1,keepdims=True); u=r.random(n_ants)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:51: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((S,n,n),tmax)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:9: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,W[grp,cur]); p=p/p.sum(1,keepdims=True); u=r.random(n_ants)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:51: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((S,n,n),tmax)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:9: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,W[grp,cur]); p=p/p.sum(1,keepdims=True); u=r.random(n_ants)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:51: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((S,n,n),tmax)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:9: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,W[grp,cur]); p=p/p.sum(1,keepdims=True); u=r.random(n_ants)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:51: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((S,n,n),tmax)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:9: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,W[grp,cur]); p=p/p.sum(1,keepdims=True); u=r.random(n_ants)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+1800 / 2160 4389 s
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:51: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((S,n,n),tmax)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:9: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,W[grp,cur]); p=p/p.sum(1,keepdims=True); u=r.random(n_ants)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+1900 / 2160 4414 s
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:51: RuntimeWarning: divide by zero encountered in divide
+  eta=1.0/(D+np.eye(n)); eta[np.eye(n,dtype=bool)]=0; L0=T.tour_len(D,T.nn_tour(D)); tmax=1.0/(rho*L0); tmin=tmax/(2*n); tau=np.full((S,n,n),tmax)
+/Users/meros/Desktop/fly-mb-compartments/fly-tsp/v3/../v2/v2core.py:9: RuntimeWarning: invalid value encountered in divide
+  p=np.where(vis,0.0,W[grp,cur]); p=p/p.sum(1,keepdims=True); u=r.random(n_ants)[:,None]; nxt=np.minimum((p.cumsum(1)<u).sum(1),n-1)
+2000 / 2160 4514 s
+2100 / 2160 4592 s
+done 4602 s

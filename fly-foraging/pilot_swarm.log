@@ -1,0 +1,18 @@
+consistent done
+conflict done
+
+## consistent (20 test worlds, 20 agents each; total net reward over 6000 ticks)
+  independent  total  +267.4   per agent  +13.4
+  attract      total  +221.8   per agent  +11.1
+  observe      total  +358.0   per agent  +17.9
+  broadcast    total  +421.6   per agent  +21.1
+  ants         total  +174.3   per agent   +8.7
+  single       total   +36.8   per agent  +36.8
+
+## conflict (20 test worlds, 20 agents each; total net reward over 6000 ticks)
+  independent  total  +209.8   per agent  +10.5
+  attract      total  +149.8   per agent   +7.5
+  observe      total  +259.8   per agent  +13.0
+  broadcast    total  +305.2   per agent  +15.3
+  ants         total  +180.2   per agent   +9.0
+  single       total   +28.0   per agent  +28.0

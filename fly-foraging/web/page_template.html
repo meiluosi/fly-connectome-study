@@ -1,0 +1,274 @@
+<title>果蝇觅食实验台</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout concept: a lab bench. Two matched arenas on top (one fly, one colony), an instrument rail below (brain, lesions), the measured data last.
+   Palette: cool paper grey + ink blue; fly = blue, colony = orange, odour families = teal / violet. Type: Plex Sans + Plex Mono (instrument labels), Plex Sans Condensed for the name. */
+:root{
+  --bg:#edf0f3; --surface:#ffffff; --surface2:#f5f7f9; --ink:#142030; --muted:#566677; --line:#d3dae1;
+  --fly:#1f6fd0; --ant:#c9501b; --swarm:#b0357f; --famA:#0b8a84; --famB:#7048c9; --pos:#157a4f; --neg:#b03a28; --accent:#1f6fd0;
+  --f-body:"IBM Plex Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace; --f-name:"IBM Plex Sans Condensed","IBM Plex Sans","PingFang SC",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e151c; --surface:#16202a; --surface2:#1c2833; --ink:#e4ecf3; --muted:#9db0c2; --line:#2a3947;
+  --fly:#5aa5f5; --ant:#f08a5d; --swarm:#f08ac0; --famA:#3cc7bf; --famB:#ad90f5; --pos:#4cc88f; --neg:#f0806c; --accent:#5aa5f5; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0e151c; --surface:#16202a; --surface2:#1c2833; --ink:#e4ecf3; --muted:#9db0c2; --line:#2a3947;
+  --fly:#5aa5f5; --ant:#f08a5d; --swarm:#f08ac0; --famA:#3cc7bf; --famB:#ad90f5; --pos:#4cc88f; --neg:#f0806c; --accent:#5aa5f5; color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5;padding-inline:16px;padding-block:20px 40px}
+.wrap{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+header h1{font-family:var(--f-name);font-weight:600;font-size:clamp(26px,4vw,34px);letter-spacing:.01em;margin:0 0 4px}
+header p{margin:0;color:var(--muted);max-width:68ch}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.panel h2{font-size:12px;font-family:var(--f-mono);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.bar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.bar label{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px}
+button,select,input[type=range]{font:inherit}
+button{background:var(--surface2);color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:6px 12px;cursor:pointer}
+button:hover{border-color:var(--accent)} button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+select{background:var(--surface2);color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:5px 8px;max-width:100%}
+.arenas{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.arena canvas{width:100%;aspect-ratio:1;display:block;border-radius:4px;background:var(--surface2);border:1px solid var(--line)}
+.arena h3{margin:0 0 8px;font-size:15px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline}
+.arena h3 .tag{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.stats{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px;font-family:var(--f-mono);font-size:13px;font-variant-numeric:tabular-nums}
+.stats b{font-weight:500;font-size:18px}
+.fly-c{color:var(--fly)} .ant-c{color:var(--ant)} .swarm-c{color:var(--swarm)}
+.rail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+@media (max-width:760px){.rail{grid-template-columns:1fr}}
+.vrow{display:grid;grid-template-columns:34px 1fr 52px;gap:8px;align-items:center;margin:5px 0;font-family:var(--f-mono);font-size:12px;font-variant-numeric:tabular-nums}
+.vtrack{position:relative;height:12px;background:var(--surface2);border:1px solid var(--line);border-radius:3px}
+.vtrack::after{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--muted)}
+.vfill{position:absolute;top:0;bottom:0;border-radius:2px}
+.sign{display:inline-block;width:16px;text-align:center;border-radius:3px;font-family:var(--f-mono);font-size:12px}
+.sign.p{color:var(--pos)} .sign.n{color:var(--neg)}
+canvas.kc{width:100%;max-width:340px;aspect-ratio:46/45;display:block;border-radius:4px;background:var(--surface2);border:1px solid var(--line)}
+canvas.spark{width:100%;height:120px;display:block}
+details{border:1px solid var(--line);border-radius:5px;padding:6px 10px;margin-top:8px;background:var(--surface2)}
+summary{cursor:pointer;font-size:13px;font-weight:500}
+.checks{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:2px 10px;margin-top:8px;max-height:220px;overflow:auto}
+.checks label{font-family:var(--f-mono);font-size:12px;display:flex;gap:6px;align-items:center;white-space:nowrap}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--f-mono);font-weight:500;font-size:12px;color:var(--muted)}
+.tablewrap{overflow-x:auto}
+.note{color:var(--muted);font-size:13px;max-width:78ch}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.real li::marker{color:var(--pos)} .hand li::marker{color:var(--neg)}
+ul{margin:4px 0 0;padding-left:18px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin-top:6px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <h1>果蝇觅食实验台</h1>
+  <p>一只虚拟果蝇在气味场里觅食。它的大脑用的是真实的果蝇连接组（MaleCNS v1.0 右半球的嗅觉输入和蘑菇体输出连线）。旁边是一群 20 只果蝇（每只都有自己的蘑菇体）和一群 20 只蚂蚁，同一个世界，同样的奖励时间表。奖励会反转，看谁先适应。</p>
+</header>
+
+<section class="panel" aria-label="控制">
+  <h2>控制</h2>
+  <div class="bar">
+    <button id="play" class="primary" type="button">暂停</button>
+    <label>速度 <select id="speed"><option value="1">1×</option><option value="4" selected>4×</option><option value="16">16×</option><option value="64">64×</option></select></label>
+    <label>果蝇的大脑 <select id="kind">
+      <option value="real" selected>真实连线（蘑菇体）</option><option value="shuffled">打乱连线</option><option value="random">随机稀疏连线</option><option value="real_binary">真实拓扑，突触数置 1</option><option value="linear">线性价值学习（无蘑菇体）</option><option value="none">不学习</option></select></label>
+    <label>果蝇群的通信 <select id="smode"><option value="independent" selected>独立（无通信）</option><option value="observe">观察学习（手写）</option><option value="broadcast">广播（非生物）</option><option value="attract">社交吸引（手写）</option></select></label>
+    <label>世界 <select id="world"><option value="c" selected>相似气味同奖励</option><option value="x">相似气味奖励相反</option></select></label>
+    <label>反转周期 <input id="rev" type="range" min="500" max="6000" step="250" value="3000"> <span id="revv" style="font-family:var(--f-mono)">3000</span></label>
+    <button id="flip" type="button">现在反转奖励</button>
+    <button id="reset" type="button">新世界</button>
+  </div>
+  <div class="legend" aria-hidden="true"><span><span class="dot" style="background:var(--famA)"></span>气味家族 A（A、A′、A″）</span><span><span class="dot" style="background:var(--famB)"></span>气味家族 B</span><span>源上的 + / − 是<b>此刻真实</b>的奖励符号；果蝇的信念显示在旁边的数字里</span></div>
+</section>
+
+<section class="arenas">
+  <div class="panel arena"><h3><span class="fly-c">果蝇</span><span class="tag" id="flytag"></span></h3><canvas id="cf" aria-label="果蝇的竞技场"></canvas>
+    <div class="stats"><div>累计净奖励<br><b id="fnet">0</b></div><div>最近 500 步<br><b id="frec">0</b></div></div></div>
+  <div class="panel arena"><h3><span class="swarm-c">果蝇群 · 20 只</span><span class="tag" id="stag"></span></h3><canvas id="cs" aria-label="果蝇群的竞技场"></canvas>
+    <div class="stats"><div>群体累计<br><b id="snet">0</b></div><div>平均每只<br><b id="sper">0</b></div><div>最近 500 步（每只）<br><b id="srec">0</b></div></div></div>
+  <div class="panel arena"><h3><span class="ant-c">蚁群 · 20 只</span><span class="tag">只靠信息素，闻不到气味</span></h3><canvas id="ca" aria-label="蚁群的竞技场"></canvas>
+    <div class="stats"><div>群体累计<br><b id="anet">0</b></div><div>平均每只<br><b id="aper">0</b></div><div>最近 500 步（每只）<br><b id="arec">0</b></div></div></div>
+</section>
+
+<section class="panel"><h2>奖励曲线（每 500 步）</h2><canvas id="spark" class="spark" aria-label="每 500 步的净奖励"></canvas>
+  <div class="legend"><span><span class="dot" style="background:var(--fly)"></span>果蝇</span><span><span class="dot" style="background:var(--swarm)"></span>果蝇群（每只）</span><span><span class="dot" style="background:var(--ant)"></span>蚂蚁（每只）</span><span>虚线：奖励反转</span></div></section>
+
+<section class="rail">
+  <div class="panel"><h2>果蝇的信念与大脑</h2>
+    <div id="vbars"></div>
+    <p class="note" id="kcnote" style="margin:10px 0 6px"></p>
+    <canvas id="kc" class="kc" aria-label="Kenyon 细胞的活动"></canvas>
+    <p class="note" style="margin-top:6px">每个格子是一个 Kenyon 细胞（共 2045 个，右半球）。亮的是对最近那个气味放电的 5%。</p>
+  </div>
+  <div class="panel"><h2>虚拟损毁（模型预测，不是果蝇实验事实）</h2>
+    <p class="note" style="margin-top:0">只对蘑菇体果蝇有效。沉默一个输出神经元（MBON），或阻断某个隔间的可塑性（模拟那里的多巴胺通路缺失），然后看学习和觅食怎么变。标签来自 MaleCNS 的真实注释。</p>
+    <details><summary>沉默输出神经元（MBON，49 个）</summary><div class="checks" id="mbonlist"></div></details>
+    <details><summary>阻断隔间的可塑性</summary><div class="checks" id="complist"></div></details>
+    <div style="margin-top:10px"><button id="clear" type="button">清除全部损毁</button></div>
+    <p class="note" id="lesnote" style="margin-bottom:0"></p>
+  </div>
+</section>
+
+<section class="panel"><h2>哪些是真的，哪些是手写的</h2>
+  <div class="two">
+    <div><b>真实的</b><ul class="real"><li>65 个嗅觉小球到 2045 个 Kenyon 细胞的连线与突触数</li><li>Kenyon 细胞只留最强的 5%</li><li>Kenyon 细胞到 49 个输出神经元的连线、预测的神经递质符号</li><li>输出神经元的类型与所属隔间</li></ul></div>
+    <div><b>手写的</b><ul class="hand"><li>气味场（随距离指数衰减）和奖励时间表</li><li>把价值变成转向的规则：这一步不是连接组决定的</li><li>学习规则（有界的 delta 规则），不是真实的生物物理</li><li>蚁群的全部规则；果蝇群里的"观察学习"和"社交吸引"是我写的假设，"广播"是非生物的共享记忆</li><li>蚂蚁与果蝇的对比只是并排演示：果蝇碰到食物就得奖励，蚂蚁要把食物带回巢才算，机制和记账方式都不同，不是严格比较</li></ul></div>
+  </div>
+</section>
+
+<section class="panel"><h2>这个模型的实测数据（先登记、后运行：200 个新世界、6000 步、配对设计）</h2>
+  <div class="tablewrap"><table><thead><tr><th>大脑</th><th>相似气味同奖励</th><th>相似气味奖励相反</th></tr></thead><tbody>
+    <tr><td>真实连线</td><td>+44.0</td><td>+35.9</td></tr><tr><td>打乱连线</td><td>+44.4</td><td>+32.4</td></tr><tr><td>随机稀疏连线</td><td>+50.9</td><td>+44.1</td></tr>
+    <tr><td>真实拓扑，突触数置 1</td><td>+47.3</td><td>+39.2</td></tr><tr><td>线性价值学习</td><td>+46.2</td><td>+31.5</td></tr><tr><td>不学习</td><td>+0.5</td><td>+0.9</td></tr></tbody></table></div>
+  <p class="note">数字是 6000 步的平均净奖励。差值与 95% 区间（配对）：</p>
+  <div class="tablewrap"><table><thead><tr><th>对比</th><th>相似气味同奖励</th><th>相似气味奖励相反</th></tr></thead><tbody>
+    <tr><td>真实 − 打乱</td><td>−0.4 [−3.6, +2.8]</td><td>+3.5 [0.0, +6.9]</td></tr>
+    <tr><td>真实 − 随机稀疏</td><td>−6.9 [−10.3, −3.6]</td><td>−8.3 [−12.3, −4.3]</td></tr>
+    <tr><td>真实 − 线性价值</td><td>−2.2 [−5.1, +0.8]</td><td>+4.3 [+0.8, +7.8]</td></tr>
+    <tr><td>真实 − 不学习</td><td>+43.5 [+41.2, +45.9]</td><td>+35.0 [+32.1, +37.8]</td></tr></tbody></table></div>
+  <ul class="note"><li>会学习：真实连线的蘑菇体比不学习的果蝇多赚约 35 到 44。</li><li>真实连线与打乱连线没有可检测的差别。</li><li><b>随机稀疏连线比真实连线更好</b>，两种世界里都是。这只说明在这个模型和这个任务里，我们用的真实连线编码没有优势，不说明真实蘑菇体次优：它还受这里没有建模的因素塑造。</li><li>线性价值学习（没有稀疏扩展）几乎一样好；扩展至多在气味相似而奖励相反的世界里有 +4 的小优势，没有超过预先设定的 ±6 等价边界。</li><li>蚁群：群体总量约 +174 到 +180（20 只，每只约 +9），只有 20 个世界的描述性数字，不在正式比较里。朴素的 Q 学习在这个稀疏奖励下基本失败（约 +1.6）。</li><li>浏览器版与 Python 版的平均结果一致（60 个世界内，差在区间内），但随机数不同，轨迹不会逐步重合。</li></ul>
+</section>
+<section class="panel"><h2>果蝇群的实测数据（先登记、后运行：100 个新世界、20 个个体）</h2>
+  <div class="tablewrap"><table><thead><tr><th>群体</th><th>相似气味同奖励（总量 / 每只）</th><th>相似气味奖励相反（总量 / 每只）</th></tr></thead><tbody>
+    <tr><td>独立果蝇群（无通信）</td><td>+274.2 / +13.7</td><td>+213.3 / +10.7</td></tr><tr><td>社交吸引（手写）</td><td>+211.0 / +10.5</td><td>+155.1 / +7.8</td></tr>
+    <tr><td>观察学习（手写）</td><td>+353.5 / +17.7</td><td>+268.3 / +13.4</td></tr><tr><td>广播（非生物）</td><td>+411.6 / +20.6</td><td>+298.5 / +14.9</td></tr>
+    <tr><td>蚁群</td><td>+187.9 / +9.4</td><td>+188.5 / +9.4</td></tr><tr><td>单只果蝇</td><td>+42.9</td><td>+35.5</td></tr></tbody></table></div>
+  <ul class="note"><li>独立果蝇群的总量高于蚁群：+86.3 [+78.0, +94.3]（一致世界）、+24.8 [+16.2, +33.5]（冲突世界）。要记得蚂蚁在记账上吃亏。</li><li>共享信息越多越好：观察学习比独立多 +79.3，广播再多 +58.1（一致世界）。</li><li>社交吸引反而有害（−63.2）：聚集加剧拥挤。</li><li><b>拥挤</b>：独立果蝇群每只的净奖励随群体变大迅速下降（1 只 41.7，5 只 32.9，10 只 22.5，20 只 13.8，40 只 6.7），总量在 20 只左右就饱和，因为食物源吃一次要等 30 步才能再吃。</li></ul></section>
+<section class="panel"><h2>进化学习规则（元学习，先登记、后运行）</h2>
+  <p class="note" style="margin-top:0">用进化策略在 5 个学习规则参数上搜索（正负预测误差的学习率、遗忘速率、KC 稀疏度、学到的价值的转向权重），目标是在反转周期不同的世界里觅食；然后在 100 个从未见过的世界上评估。3 种连线各进化 3 次。</p>
+  <ul class="note"><li>进化只给出<b>小而稳定的改进</b>：in-dist 世界里真实连线 +4.3、打乱 +5.0、随机稀疏 +6.9（多数区间不含 0），但多数没达到预先设定的 +6 门槛，所以按判据只有随机稀疏成立。</li><li>9 次进化的结果高度一致：KC 稀疏度从 5% 降到约 2%，负预测误差的学习率大于正的（7/9）。<b>没有一次选择遗忘</b>，我事先预期"更波动的世界里遗忘有益"，没有成立。</li><li>连线的结论不变：真实 − 随机稀疏 在 3 个进化种子里 2 个是随机显著更好。</li><li>只有 3 个进化种子，区间只反映世界间的方差。</li></ul></section>
+<section class="panel"><h2>整个项目的结论（五条线，先登记、后运行、有独立审查）</h2>
+  <p class="note" style="margin-top:0">这个页面只是其中的觅食实验台。同一个真实回路还在其他任务里被检验过。所有线上，<b>真实连线都没有测出优于随机稀疏连线或简单线性学习器的优势</b>。这是"没有证据"，不是"已证明没有"：好几个设定的设计本身就测不出连线效应。</p>
+  <div class="tablewrap"><table><thead><tr><th>任务</th><th>主要结果</th></tr></thead><tbody>
+    <tr><td>觅食与果蝇群（本页）</td><td>会学习；真实 ≈ 打乱；随机稀疏更好；果蝇群总量高于蚁群，共享信息越多越好</td></tr>
+    <tr><td>元学习</td><td>进化学习规则只给出小而稳定的改进，不改变连线结论</td></tr>
+    <tr><td>旅行商问题（3 轮）</td><td>在线学习、异质群体、通信、2-opt、转角上下文：相对调参蚁群的差都在 ±0.5 个百分点内；真实 ≈ 打乱 ≈ 随机 ≈ 线性</td></tr>
+    <tr><td>持续学习审计（FlyModel）</td><td>被免回放的 SLDA 超过（三个基准一致）；论文式稠密对照的大部分"稀疏优势"来自对照本身；在两种数据流、三个基准上都高于微调、EWC 与小缓冲回放，但这些反向传播基线在 CIFAR 上很弱</td></tr>
+    <tr><td>隔间与遗忘</td><td>隔间的遗忘优势主要是学习量混杂；匹配学习量后无实质差异</td></tr></tbody></table></div>
+  <ul class="note"><li>独立审查指出的最重要局限：旅行商问题里边的特征与距离启发式高度重合，转角信息没有被学习器表达出来，所以那里的"连线无关"测不出来。</li><li>要真正检验连线是否有用，需要先在任务里植入已知依赖气味组合的结构（阳性对照），再比较连线。</li></ul>
+</section>
+<p class="note">数据：Janelia MaleCNS v1.0（CC BY 4.0）。方法、预先登记和更正记录在项目的 fly-foraging 文件夹里。</p>
+</div>
+
+<script>
+const DATA=/*__DATA__*/null;
+</script>
+<script>
+/*__SIM__*/
+</script>
+<script>
+(function(){
+'use strict';
+const C=FlySim.makeCircuit(DATA), $=id=>document.getElementById(id), A=FlySim.ARENA;
+const MBK=['real','shuffled','random','real_binary'];
+const S={seed:0,conflict:false,kind:'real',playing:true,speed:4,rev:3000,t:0,world:null,wAnt:null,fly:null,ants:null,trail:[],bins:{f:[],a:[],s:[]},acc:{f:0,a:0,s:0},sel:{mbon:new Set(),comp:new Set()},recent:{f:[],a:[],s:[]},smode:'independent',wSwarm:null,swarm:null};
+function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
+function newWorld(){
+  S.seed=Math.floor(Math.random()*1e6); S.world=new FlySim.World(C,S.seed,{conflict:S.conflict,rev:S.rev}); S.wAnt=S.world.clone(); S.wSwarm=S.world.clone(); S.t=0; resetAgents();
+}
+function resetAgents(){
+  S.fly=new FlySim.Fly(C,S.world,S.kind,S.seed+5000); S.ants=new FlySim.Ants(S.wAnt,20,S.seed+9000); S.swarm=new FlySim.FlySwarm(C,S.wSwarm,20,S.smode,S.seed+13000);
+  S.trail=[]; S.bins={f:[],a:[],s:[]}; S.acc={f:0,a:0,s:0}; S.recent={f:[],a:[],s:[]}; applyLesions(); $('stag').textContent=smodeLabel(); $('flytag').textContent=kindLabel();
+}
+function smodeLabel(){return {independent:'独立，无通信',observe:'观察学习',broadcast:'广播（非生物）',attract:'社交吸引'}[S.smode];}
+function kindLabel(){return {real:'真实连线',shuffled:'打乱连线',random:'随机稀疏连线',real_binary:'真实拓扑·突触数置 1',linear:'线性价值（无蘑菇体）',none:'不学习'}[S.kind];}
+function applyLesions(){
+  const mb=S.fly&&S.fly.learner instanceof FlySim.MB; if(!mb){ $('lesnote').textContent=S.kind==='linear'||S.kind==='none'?'当前的大脑没有蘑菇体，损毁无效。':''; return; }
+  S.fly.learner.silenced.fill(0); S.fly.learner.blocked.fill(0);
+  S.sel.mbon.forEach(m=>S.fly.learner.silenced[m]=1);
+  for(let m=0;m<C.NM;m++) if(S.sel.comp.has(C.mbonComp[m])) S.fly.learner.blocked[m]=1;
+  S.fly.refreshValence(); const n1=S.sel.mbon.size,n2=S.sel.comp.size; $('lesnote').textContent=(n1||n2)?`已沉默 ${n1} 个输出神经元，阻断 ${n2} 个隔间的可塑性。新的学习从现在起受影响。`:'';
+}
+// ---- UI wiring
+$('play').onclick=()=>{S.playing=!S.playing;$('play').textContent=S.playing?'暂停':'继续';};
+$('speed').onchange=e=>S.speed=+e.target.value;
+$('kind').onchange=e=>{S.kind=e.target.value; S.world.refr.fill(0); S.wAnt.refr.fill(0); S.wSwarm.refr.fill(0); resetAgents();};
+$('smode').onchange=e=>{S.smode=e.target.value; S.wSwarm.refr.fill(0); S.swarm=new FlySim.FlySwarm(C,S.wSwarm,20,S.smode,S.seed+13000); S.bins.s=[]; S.acc.s=0; S.recent.s=[]; $('stag').textContent=smodeLabel();};
+$('world').onchange=e=>{S.conflict=e.target.value==='x'; newWorld();};
+$('rev').oninput=e=>{S.rev=+e.target.value;$('revv').textContent=S.rev;S.world.rev=S.rev;S.wAnt.rev=S.rev;S.wSwarm.rev=S.rev;};
+$('flip').onclick=()=>{S.world.flip=1-S.world.flip;S.wAnt.flip=S.world.flip;S.wSwarm.flip=S.world.flip;};
+$('reset').onclick=newWorld;
+$('clear').onclick=()=>{S.sel.mbon.clear();S.sel.comp.clear();document.querySelectorAll('#mbonlist input,#complist input').forEach(c=>c.checked=false);applyLesions();};
+(function buildLists(){
+  const ml=$('mbonlist'); for(let m=0;m<C.NM;m++){ const id='m'+m; const l=document.createElement('label'); l.htmlFor=id; l.innerHTML=`<input type="checkbox" id="${id}"><span class="sign ${C.signs[m]>0?'p':'n'}" title="${C.signs[m]>0?'预测为兴奋性（乙酰胆碱）':'预测为抑制性（GABA 或谷氨酸）'}">${C.signs[m]>0?'+':'−'}</span>${C.mbonType[m]} · ${C.mbonComp[m]}`; ml.appendChild(l); l.querySelector('input').onchange=e=>{e.target.checked?S.sel.mbon.add(m):S.sel.mbon.delete(m);applyLesions();}; }
+  const comps=[...new Set(C.mbonComp)].sort(); const cl=$('complist'); comps.forEach((c,i)=>{ const id='c'+i; const l=document.createElement('label'); l.htmlFor=id; l.innerHTML=`<input type="checkbox" id="${id}">${c}`; cl.appendChild(l); l.querySelector('input').onchange=e=>{e.target.checked?S.sel.comp.add(c):S.sel.comp.delete(c);applyLesions();}; });
+})();
+// ---- drawing
+function fit(cv){const r=cv.getBoundingClientRect(),d=window.devicePixelRatio||1,w=Math.max(10,Math.round(r.width*d)),h=Math.max(10,Math.round(r.height*d)); if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;} return d;}
+function famColor(i,w){return w.family[i]===0?css('--famA'):css('--famB');}
+const NAMES=['A','A′','A″','B','B′','B″'];
+function drawArena(cv,world,t,kind){
+  const d=fit(cv),ctx=cv.getContext('2d'),W=cv.width,H=cv.height,sx=W/A,sy=H/A; ctx.clearRect(0,0,W,H);
+  ctx.strokeStyle=css('--line'); ctx.lineWidth=1*d; ctx.globalAlpha=.55; for(let g=20;g<A;g+=20){ctx.beginPath();ctx.moveTo(g*sx,0);ctx.lineTo(g*sx,H);ctx.moveTo(0,g*sy);ctx.lineTo(W,g*sy);ctx.stroke();} ctx.globalAlpha=1;
+  for(let i=0;i<6;i++){ const [x,y]=world.pos[i]; const col=famColor(i,world); const gr=ctx.createRadialGradient(x*sx,y*sy,0,x*sx,y*sy,world.lam*2*sx); gr.addColorStop(0,col+'55'); gr.addColorStop(1,col+'00'); ctx.fillStyle=gr; ctx.beginPath(); ctx.arc(x*sx,y*sy,world.lam*2*sx,0,7); ctx.fill(); }
+}
+function drawSources(ctx,cv,world,t,showVal,val){
+  const sx=cv.width/A,d=window.devicePixelRatio||1;
+  for(let i=0;i<6;i++){ const [x,y]=world.pos[i],rv=world.rewardValue(i,t),col=famColor(i,world),dim=world.refr[i]>0; ctx.globalAlpha=dim?.45:1;
+    ctx.fillStyle=col; ctx.beginPath(); ctx.arc(x*sx,y*sx,3.6*sx,0,7); ctx.fill();
+    ctx.fillStyle='#fff'; ctx.font=`600 ${13*d}px ${css('--f-mono')||'monospace'}`; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(rv>0?'+':'−',x*sx,y*sx+.5*d);
+    ctx.globalAlpha=1; if(showVal){ ctx.fillStyle=css('--ink'); ctx.font=`500 ${11*d}px ${css('--f-mono')||'monospace'}`; ctx.fillText(NAMES[i]+' '+(val[i]>=0?'+':'')+val[i].toFixed(2),x*sx,y*sx-11*d); } }
+}
+function drawFly(){
+  const cv=$('cf'),ctx=cv.getContext('2d'); drawArena(cv,S.world,S.t,S.kind); const sx=cv.width/A,d=window.devicePixelRatio||1,f=S.fly;
+  ctx.lineWidth=1.6*d; for(let i=1;i<S.trail.length;i++){ ctx.strokeStyle=css('--fly'); ctx.globalAlpha=i/S.trail.length*.55; ctx.beginPath(); ctx.moveTo(S.trail[i-1][0]*sx,S.trail[i-1][1]*sx); ctx.lineTo(S.trail[i][0]*sx,S.trail[i][1]*sx); ctx.stroke(); } ctx.globalAlpha=1;
+  drawSources(ctx,cv,S.world,S.t,true,f.val);
+  ctx.save(); ctx.translate(f.pos[0]*sx,f.pos[1]*sx); ctx.rotate(f.th); ctx.fillStyle=css('--fly'); ctx.beginPath(); ctx.moveTo(8*d,0); ctx.lineTo(-6*d,5*d); ctx.lineTo(-3*d,0); ctx.lineTo(-6*d,-5*d); ctx.closePath(); ctx.fill(); ctx.restore();
+}
+function drawAnts(){
+  const cv=$('ca'),ctx=cv.getContext('2d'); drawArena(cv,S.wAnt,S.t,'ants'); const sx=cv.width/A,a=S.ants,G=a.G,cell=a.prm.cell;
+  ctx.fillStyle=css('--ant'); for(let gx=0;gx<G;gx++)for(let gy=0;gy<G;gy++){ const v=a.tau[gx*G+gy]; if(v>.15){ ctx.globalAlpha=Math.min(.7,v/6); ctx.fillRect(gx*cell*sx,gy*cell*sx,cell*sx,cell*sx);} } ctx.globalAlpha=1;
+  drawSources(ctx,cv,S.wAnt,S.t,false,null);
+  ctx.strokeStyle=css('--muted'); ctx.lineWidth=2*(window.devicePixelRatio||1); ctx.beginPath(); ctx.arc(a.nest[0]*sx,a.nest[1]*sx,4*sx,0,7); ctx.stroke();
+  for(let i=0;i<a.n;i++){ ctx.fillStyle=css('--ant'); ctx.globalAlpha=a.carry[i]?1:.65; ctx.beginPath(); ctx.arc(a.pos[i][0]*sx,a.pos[i][1]*sx,(a.carry[i]?3.4:2.4)*(window.devicePixelRatio||1),0,7); ctx.fill(); } ctx.globalAlpha=1;
+}
+function drawSwarm(){
+  const cv=$('cs'),ctx=cv.getContext('2d'); drawArena(cv,S.wSwarm,S.t,'swarm'); const sx=cv.width/A,d=window.devicePixelRatio||1; drawSources(ctx,cv,S.wSwarm,S.t,false,null);
+  ctx.fillStyle=css('--swarm'); for(const f of S.swarm.flies){ ctx.save(); ctx.translate(f.pos[0]*sx,f.pos[1]*sx); ctx.rotate(f.th); ctx.globalAlpha=.85; ctx.beginPath(); ctx.moveTo(5*d,0); ctx.lineTo(-4*d,3*d); ctx.lineTo(-2*d,0); ctx.lineTo(-4*d,-3*d); ctx.closePath(); ctx.fill(); ctx.restore(); }
+}
+function drawSpark(){
+  const cv=$('spark'),d=fit(cv),ctx=cv.getContext('2d'),W=cv.width,H=cv.height,pad=26*d; ctx.clearRect(0,0,W,H);
+  const nb=Math.max(S.bins.f.length,S.bins.a.length,S.bins.s.length,12), win=Math.min(nb,48), f=S.bins.f.slice(-win), a=S.bins.a.slice(-win), sw=S.bins.s.slice(-win); const all=f.concat(a,sw,[3,-3]); const lo=Math.min(...all),hi=Math.max(...all);
+  const X=i=>pad+(W-2*pad)*(i/(win-1)),Y=v=>H-pad/1.3-(H-pad*1.7)*((v-lo)/(hi-lo||1));
+  ctx.strokeStyle=css('--line'); ctx.lineWidth=d; ctx.beginPath(); ctx.moveTo(pad,Y(0)); ctx.lineTo(W-pad,Y(0)); ctx.stroke();
+  ctx.fillStyle=css('--muted'); ctx.font=`${11*d}px ${css('--f-mono')||'monospace'}`; ctx.textAlign='right'; ctx.fillText(hi.toFixed(0),pad-4*d,Y(hi)+4*d); ctx.fillText(lo.toFixed(0),pad-4*d,Y(lo)); ctx.fillText('0',pad-4*d,Y(0)+4*d);
+  const first=S.bins.f.length-f.length; ctx.setLineDash([4*d,4*d]); ctx.strokeStyle=css('--muted'); for(let k=first;k<first+win;k++){ const m=Math.ceil(k*500/S.world.rev); if(m>=1&&m*S.world.rev<(k+1)*500){ const i=k-first; ctx.beginPath(); ctx.moveTo(X(i),pad/2); ctx.lineTo(X(i),H-pad/1.3); ctx.stroke(); } } ctx.setLineDash([]);
+  const line=(arr,col)=>{ if(arr.length<2)return; ctx.strokeStyle=col; ctx.lineWidth=2*d; ctx.beginPath(); arr.forEach((v,i)=>{const x=X(i),y=Y(v); i?ctx.lineTo(x,y):ctx.moveTo(x,y);}); ctx.stroke(); ctx.fillStyle=col; ctx.beginPath(); ctx.arc(X(arr.length-1),Y(arr[arr.length-1]),3.5*d,0,7); ctx.fill(); };
+  line(f,css('--fly')); line(sw,css('--swarm')); line(a,css('--ant'));
+}
+function drawKC(){
+  const cv=$('kc'),d=fit(cv),ctx=cv.getContext('2d'),W=cv.width,H=cv.height; ctx.clearRect(0,0,W,H); const f=S.fly;
+  if(!MBK.includes(S.kind)){ $('kcnote').textContent='这个大脑没有 Kenyon 细胞编码。'; return; }
+  const conc=S.world.conc(f.pos[0],f.pos[1],new Float64Array(6)); let bi=0; for(let i=1;i<6;i++) if(conc[i]>conc[bi]) bi=i;
+  const cols=46,rows=45,cw=W/cols,ch=H/rows; ctx.fillStyle=css('--line'); ctx.globalAlpha=.6; for(let k=0;k<C.NK;k++){ const x=(k%cols)*cw,y=Math.floor(k/cols)*ch; ctx.fillRect(x+.5*d,y+.5*d,cw-1*d,ch-1*d); } ctx.globalAlpha=1;
+  ctx.fillStyle=css('--fly'); const code=f.codes[bi]; for(let j=0;j<code.length;j++){ const k=code[j]; const x=(k%cols)*cw,y=Math.floor(k/cols)*ch; ctx.fillRect(x+.5*d,y+.5*d,cw-1*d,ch-1*d); }
+  $('kcnote').textContent=`离果蝇最近的气味是 ${NAMES[bi]}：${code.length} 个 Kenyon 细胞放电（5%）。`;
+}
+function updateBars(){
+  const box=$('vbars'); if(!box.children.length){ for(let i=0;i<6;i++){ const r=document.createElement('div'); r.className='vrow'; r.innerHTML=`<span>${NAMES[i]}</span><span class="vtrack"><span class="vfill" id="vf${i}"></span></span><span id="vv${i}" style="text-align:right"></span>`; box.appendChild(r);} }
+  for(let i=0;i<6;i++){ const v=S.fly.val[i],el=$('vf'+i); const w=Math.abs(v)*50; el.style.left=(v>=0?50:50-w)+'%'; el.style.width=w+'%'; el.style.background=v>=0?css('--pos'):css('--neg'); $('vv'+i).textContent=(v>=0?'+':'')+v.toFixed(2); }
+}
+// ---- main loop
+function tick(){
+  const f=S.fly,a=S.ants,sw=S.swarm; const rf=f.step(S.t), ra=a.step(S.t), rs=sw.step(S.t); S.t++; S.acc.f+=rf; S.acc.a+=ra/20; S.acc.s+=rs/20; S.recent.f.push(rf); S.recent.a.push(ra/20); S.recent.s.push(rs/20);
+  if(S.recent.f.length>500){S.recent.f.shift();S.recent.a.shift();S.recent.s.shift();}
+  if(f.events.length>0&&f.events.length>400)f.events.splice(0,200);
+  S.trail.push([f.pos[0],f.pos[1]]); if(S.trail.length>260)S.trail.shift();
+  if(S.t%500===0){S.bins.f.push(S.acc.f);S.bins.a.push(S.acc.a);S.bins.s.push(S.acc.s);S.acc.f=0;S.acc.a=0;S.acc.s=0;}
+}
+let lastUI=0;
+function frame(ts){
+  if(S.playing){ for(let i=0;i<S.speed;i++) tick(); }
+  drawFly(); drawSwarm(); drawAnts();
+  if(ts-lastUI>120){ lastUI=ts; updateBars(); drawKC(); drawSpark();
+    const sum=arr=>arr.reduce((p,c)=>p+c,0); $('fnet').textContent=S.fly.reward.toFixed(0); $('frec').textContent=sum(S.recent.f).toFixed(0);
+    $('anet').textContent=S.ants.reward.toFixed(0); $('aper').textContent=(S.ants.reward/20).toFixed(1); $('arec').textContent=sum(S.recent.a).toFixed(1); $('snet').textContent=S.swarm.reward.toFixed(0); $('sper').textContent=(S.swarm.reward/20).toFixed(1); $('srec').textContent=sum(S.recent.s).toFixed(1); }
+  requestAnimationFrame(frame);
+}
+newWorld(); requestAnimationFrame(frame);
+})();
+</script>

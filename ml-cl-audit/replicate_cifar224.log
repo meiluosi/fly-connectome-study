@@ -1,0 +1,6 @@
+cifar100_224 seed 0 {'acc_final': 0.5122, 'acc_half': 0.6125, 'mem_loss': 0.126, 'learn_acc': 0.6382} 34 s
+cifar100_224 seed 1 {'acc_final': 0.5068, 'acc_half': 0.6081, 'mem_loss': 0.126, 'learn_acc': 0.6328} 71 s
+cifar100_224 seed 2 {'acc_final': 0.5038, 'acc_half': 0.6065, 'mem_loss': 0.1251, 'learn_acc': 0.6289} 119 s
+cifar100_224 seed 3 {'acc_final': 0.5156, 'acc_half': 0.6167, 'mem_loss': 0.1262, 'learn_acc': 0.6418} 181 s
+cifar100_224 seed 4 {'acc_final': 0.5037, 'acc_half': 0.6033, 'mem_loss': 0.124, 'learn_acc': 0.6277} 260 s
+MEAN {'acc_final': '0.5084±0.0047', 'acc_half': '0.6094±0.0047', 'mem_loss': '0.1255±0.0008', 'learn_acc': '0.6339±0.0054'} | paper final ~0.41

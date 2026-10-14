@@ -1,0 +1,229 @@
+val|B1_vanilla|{"lr": 1e-05}|s0 final 0.0612 68.1 s
+val|B1_vanilla|{"lr": 0.0001}|s0 final 0.0102 59.8 s
+val|B1_vanilla|{"lr": 0.001}|s0 final 0.0100 76.4 s
+val|B1_vanilla|{"lr": 0.01}|s0 final 0.0100 74.8 s
+test|B1_vanilla|{"lr": 1e-05}|s0 final 0.0600 86.6 s
+test|B1_vanilla|{"lr": 1e-05}|s1 final 0.0609 90.6 s
+test|B1_vanilla|{"lr": 1e-05}|s2 final 0.0598 87.1 s
+test|B1_vanilla|{"lr": 1e-05}|s3 final 0.0581 85.1 s
+test|B1_vanilla|{"lr": 1e-05}|s4 final 0.0593 90.0 s
+val|B2_ewc|{"lr": 1e-05, "lam": 0.1}|s0 final 0.0610 193.2 s
+val|B2_ewc|{"lr": 1e-05, "lam": 1}|s0 final 0.0610 191.4 s
+val|B2_ewc|{"lr": 1e-05, "lam": 10}|s0 final 0.0610 188.4 s
+val|B2_ewc|{"lr": 1e-05, "lam": 100}|s0 final 0.0614 196.3 s
+val|B2_ewc|{"lr": 1e-05, "lam": 1000.0}|s0 final 0.0634 188.2 s
+val|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s0 final 0.0720 195.0 s
+val|B2_ewc|{"lr": 0.0001, "lam": 0.1}|s0 final 0.0104 172.6 s
+val|B2_ewc|{"lr": 0.0001, "lam": 1}|s0 final 0.0104 164.4 s
+val|B2_ewc|{"lr": 0.0001, "lam": 10}|s0 final 0.0104 160.4 s
+val|B2_ewc|{"lr": 0.0001, "lam": 100}|s0 final 0.0104 159.3 s
+val|B2_ewc|{"lr": 0.0001, "lam": 1000.0}|s0 final 0.0100 159.4 s
+val|B2_ewc|{"lr": 0.0001, "lam": 10000.0}|s0 final 0.0100 160.4 s
+val|B2_ewc|{"lr": 0.001, "lam": 0.1}|s0 final 0.0100 158.3 s
+val|B2_ewc|{"lr": 0.001, "lam": 1}|s0 final 0.0100 166.2 s
+val|B2_ewc|{"lr": 0.001, "lam": 10}|s0 final 0.0100 148.0 s
+val|B2_ewc|{"lr": 0.001, "lam": 100}|s0 final 0.0100 148.7 s
+val|B2_ewc|{"lr": 0.001, "lam": 1000.0}|s0 final 0.0100 165.8 s
+val|B2_ewc|{"lr": 0.001, "lam": 10000.0}|s0 final 0.0100 170.4 s
+val|B2_ewc|{"lr": 0.01, "lam": 0.1}|s0 final 0.0100 192.2 s
+val|B2_ewc|{"lr": 0.01, "lam": 1}|s0 final 0.0100 218.1 s
+val|B2_ewc|{"lr": 0.01, "lam": 10}|s0 final 0.0100 187.8 s
+val|B2_ewc|{"lr": 0.01, "lam": 100}|s0 final 0.0100 163.1 s
+val|B2_ewc|{"lr": 0.01, "lam": 1000.0}|s0 final 0.0100 161.8 s
+val|B2_ewc|{"lr": 0.01, "lam": 10000.0}|s0 final 0.0100 160.8 s
+test|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s0 final 0.0678 173.2 s
+test|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s1 final 0.0705 173.0 s
+test|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s2 final 0.0681 178.6 s
+test|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s3 final 0.0674 183.8 s
+test|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s4 final 0.0697 210.7 s
+val|B3_er200|{"lr": 1e-05, "buffer": 200}|s0 final 0.0216 100.7 s
+val|B3_er200|{"lr": 0.0001, "buffer": 200}|s0 final 0.0488 101.7 s
+val|B3_er200|{"lr": 0.001, "buffer": 200}|s0 final 0.0440 104.1 s
+val|B3_er200|{"lr": 0.01, "buffer": 200}|s0 final 0.0420 96.9 s
+test|B3_er200|{"lr": 0.0001, "buffer": 200}|s0 final 0.0536 108.7 s
+test|B3_er200|{"lr": 0.0001, "buffer": 200}|s1 final 0.0802 115.3 s
+test|B3_er200|{"lr": 0.0001, "buffer": 200}|s2 final 0.0473 126.6 s
+test|B3_er200|{"lr": 0.0001, "buffer": 200}|s3 final 0.0725 124.4 s
+test|B3_er200|{"lr": 0.0001, "buffer": 200}|s4 final 0.0607 123.8 s
+val|B3_er1000|{"lr": 1e-05, "buffer": 1000}|s0 final 0.0432 111.8 s
+val|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s0 final 0.2014 127.5 s
+val|B3_er1000|{"lr": 0.001, "buffer": 1000}|s0 final 0.1948 120.8 s
+val|B3_er1000|{"lr": 0.01, "buffer": 1000}|s0 final 0.0296 116.7 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s0 final 0.2113 139.9 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s1 final 0.2049 126.6 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s2 final 0.2131 142.7 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s3 final 0.1962 115.2 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s4 final 0.2112 109.7 s
+stage done
+val|B1_vanilla|{"lr": 1e-05}|s0 final 0.0546 70.7 s
+val|B1_vanilla|{"lr": 0.0001}|s0 final 0.0100 65.7 s
+val|B1_vanilla|{"lr": 0.001}|s0 final 0.0100 63.4 s
+val|B1_vanilla|{"lr": 0.01}|s0 final 0.0100 62.3 s
+test|B1_vanilla|{"lr": 1e-05}|s0 final 0.0465 63.4 s
+test|B1_vanilla|{"lr": 1e-05}|s1 final 0.0482 68.3 s
+test|B1_vanilla|{"lr": 1e-05}|s2 final 0.0462 71.1 s
+test|B1_vanilla|{"lr": 1e-05}|s3 final 0.0471 69.7 s
+test|B1_vanilla|{"lr": 1e-05}|s4 final 0.0488 67.4 s
+val|B2_ewc|{"lr": 1e-05, "lam": 0.1}|s0 final 0.0548 140.9 s
+val|B2_ewc|{"lr": 1e-05, "lam": 1}|s0 final 0.0548 141.6 s
+val|B2_ewc|{"lr": 1e-05, "lam": 10}|s0 final 0.0548 138.3 s
+val|B2_ewc|{"lr": 1e-05, "lam": 100}|s0 final 0.0552 139.4 s
+val|B2_ewc|{"lr": 1e-05, "lam": 1000.0}|s0 final 0.0580 139.4 s
+val|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s0 final 0.0760 137.3 s
+val|B2_ewc|{"lr": 0.0001, "lam": 0.1}|s0 final 0.0100 139.7 s
+val|B2_ewc|{"lr": 0.0001, "lam": 1}|s0 final 0.0100 132.0 s
+val|B2_ewc|{"lr": 0.0001, "lam": 10}|s0 final 0.0100 132.0 s
+val|B2_ewc|{"lr": 0.0001, "lam": 100}|s0 final 0.0100 132.4 s
+val|B2_ewc|{"lr": 0.0001, "lam": 1000.0}|s0 final 0.0100 132.4 s
+val|B2_ewc|{"lr": 0.0001, "lam": 10000.0}|s0 final 0.0100 133.3 s
+val|B2_ewc|{"lr": 0.001, "lam": 0.1}|s0 final 0.0100 133.6 s
+val|B2_ewc|{"lr": 0.001, "lam": 1}|s0 final 0.0100 138.8 s
+val|B2_ewc|{"lr": 0.001, "lam": 10}|s0 final 0.0100 140.7 s
+val|B2_ewc|{"lr": 0.001, "lam": 100}|s0 final 0.0100 141.1 s
+val|B2_ewc|{"lr": 0.001, "lam": 1000.0}|s0 final 0.0100 141.2 s
+val|B2_ewc|{"lr": 0.001, "lam": 10000.0}|s0 final 0.0100 141.0 s
+val|B2_ewc|{"lr": 0.01, "lam": 0.1}|s0 final 0.0100 141.4 s
+val|B2_ewc|{"lr": 0.01, "lam": 1}|s0 final 0.0100 141.5 s
+val|B2_ewc|{"lr": 0.01, "lam": 10}|s0 final 0.0100 141.5 s
+val|B2_ewc|{"lr": 0.01, "lam": 100}|s0 final 0.0100 141.0 s
+val|B2_ewc|{"lr": 0.01, "lam": 1000.0}|s0 final 0.0100 141.1 s
+val|B2_ewc|{"lr": 0.01, "lam": 10000.0}|s0 final 0.0100 141.4 s
+test|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s0 final 0.0585 151.5 s
+test|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s1 final 0.0670 152.7 s
+test|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s2 final 0.0638 152.5 s
+test|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s3 final 0.0643 152.9 s
+test|B2_ewc|{"lr": 1e-05, "lam": 10000.0}|s4 final 0.0622 154.7 s
+val|B3_er200|{"lr": 1e-05, "buffer": 200}|s0 final 0.1198 68.7 s
+val|B3_er200|{"lr": 0.0001, "buffer": 200}|s0 final 0.1854 71.6 s
+val|B3_er200|{"lr": 0.001, "buffer": 200}|s0 final 0.1952 73.4 s
+val|B3_er200|{"lr": 0.01, "buffer": 200}|s0 final 0.0300 65.9 s
+test|B3_er200|{"lr": 0.001, "buffer": 200}|s0 final 0.1536 72.0 s
+test|B3_er200|{"lr": 0.001, "buffer": 200}|s1 final 0.1735 72.4 s
+test|B3_er200|{"lr": 0.001, "buffer": 200}|s2 final 0.1505 66.5 s
+test|B3_er200|{"lr": 0.001, "buffer": 200}|s3 final 0.1420 75.7 s
+test|B3_er200|{"lr": 0.001, "buffer": 200}|s4 final 0.1890 72.1 s
+val|B3_er1000|{"lr": 1e-05, "buffer": 1000}|s0 final 0.3330 67.8 s
+val|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s0 final 0.4408 60.7 s
+val|B3_er1000|{"lr": 0.001, "buffer": 1000}|s0 final 0.4136 67.7 s
+val|B3_er1000|{"lr": 0.01, "buffer": 1000}|s0 final 0.0166 70.6 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s0 final 0.4247 63.2 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s1 final 0.4139 75.7 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s2 final 0.4393 79.5 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s3 final 0.4157 78.9 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s4 final 0.4155 75.6 s
+stage done
+val|B1_vanilla|inter|{"lr": 1e-05}|s0 final 0.0430 57.6 s
+val|B1_vanilla|inter|{"lr": 0.0001}|s0 final 0.0368 61.6 s
+val|B1_vanilla|inter|{"lr": 0.001}|s0 final 0.0356 62.8 s
+val|B1_vanilla|inter|{"lr": 0.01}|s0 final 0.0338 65.5 s
+test|B1_vanilla|inter|{"lr": 1e-05}|s0 final 0.0441 65.7 s
+test|B1_vanilla|inter|{"lr": 1e-05}|s1 final 0.0442 67.6 s
+test|B1_vanilla|inter|{"lr": 1e-05}|s2 final 0.0435 65.9 s
+test|B1_vanilla|inter|{"lr": 1e-05}|s3 final 0.0441 58.5 s
+test|B1_vanilla|inter|{"lr": 1e-05}|s4 final 0.0451 66.8 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 0.1}|s0 final 0.0430 149.1 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 1}|s0 final 0.0430 146.5 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 10}|s0 final 0.0430 143.1 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 100}|s0 final 0.0434 143.1 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 1000.0}|s0 final 0.0470 146.7 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 10000.0}|s0 final 0.0598 165.0 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 0.1}|s0 final 0.0372 164.1 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 1}|s0 final 0.0378 164.9 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 10}|s0 final 0.0374 164.3 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 100}|s0 final 0.0392 163.8 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 1000.0}|s0 final 0.0476 164.9 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 10000.0}|s0 final 0.0490 116442.4 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 0.1}|s0 final 0.0360 381.7 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 1}|s0 final 0.0354 302.5 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 10}|s0 final 0.0364 309.3 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 100}|s0 final 0.0420 354.4 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 1000.0}|s0 final 0.0448 368.2 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 10000.0}|s0 final 0.0360 447.6 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 0.1}|s0 final 0.0348 382.1 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 1}|s0 final 0.0380 441.3 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 10}|s0 final 0.0358 549.1 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 100}|s0 final 0.0324 478.1 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 1000.0}|s0 final 0.0306 445.0 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 10000.0}|s0 final 0.0350 471.7 s
+test|B2_ewc|inter|{"lr": 1e-05, "lam": 10000.0}|s0 final 0.0577 493.6 s
+test|B2_ewc|inter|{"lr": 1e-05, "lam": 10000.0}|s1 final 0.0585 654.4 s
+test|B2_ewc|inter|{"lr": 1e-05, "lam": 10000.0}|s2 final 0.0578 306.8 s
+test|B2_ewc|inter|{"lr": 1e-05, "lam": 10000.0}|s3 final 0.0599 223.1 s
+test|B2_ewc|inter|{"lr": 1e-05, "lam": 10000.0}|s4 final 0.0577 223.2 s
+val|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s0 final 0.1122 93.4 s
+val|B3_er200|inter|{"lr": 0.0001, "buffer": 200}|s0 final 0.0810 101.4 s
+val|B3_er200|inter|{"lr": 0.001, "buffer": 200}|s0 final 0.0694 93.4 s
+val|B3_er200|inter|{"lr": 0.01, "buffer": 200}|s0 final 0.0718 95.5 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s0 final 0.1057 103.9 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s1 final 0.1102 107.4 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s2 final 0.1130 105.2 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s3 final 0.1131 104.2 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s4 final 0.1176 106.7 s
+val|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s0 final 0.2188 98.7 s
+val|B3_er1000|inter|{"lr": 0.0001, "buffer": 1000}|s0 final 0.2022 118.8 s
+val|B3_er1000|inter|{"lr": 0.001, "buffer": 1000}|s0 final 0.1798 96.8 s
+val|B3_er1000|inter|{"lr": 0.01, "buffer": 1000}|s0 final 0.1198 91.6 s
+test|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s0 final 0.2114 113.9 s
+test|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s1 final 0.2113 111.9 s
+test|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s2 final 0.2175 105.8 s
+test|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s3 final 0.2115 103.7 s
+test|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s4 final 0.2237 108.0 s
+stage done
+val|B1_vanilla|inter|{"lr": 1e-05}|s0 final 0.0410 81.1 s
+val|B1_vanilla|inter|{"lr": 0.0001}|s0 final 0.0390 75.6 s
+val|B1_vanilla|inter|{"lr": 0.001}|s0 final 0.0386 75.3 s
+val|B1_vanilla|inter|{"lr": 0.01}|s0 final 0.0370 76.1 s
+test|B1_vanilla|inter|{"lr": 1e-05}|s0 final 0.0403 85.0 s
+test|B1_vanilla|inter|{"lr": 1e-05}|s1 final 0.0403 84.6 s
+test|B1_vanilla|inter|{"lr": 1e-05}|s2 final 0.0399 85.3 s
+test|B1_vanilla|inter|{"lr": 1e-05}|s3 final 0.0407 84.5 s
+test|B1_vanilla|inter|{"lr": 1e-05}|s4 final 0.0410 84.7 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 0.1}|s0 final 0.0402 159.5 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 1}|s0 final 0.0402 157.2 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 10}|s0 final 0.0402 160.1 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 100}|s0 final 0.0402 159.9 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 1000.0}|s0 final 0.0416 161.4 s
+val|B2_ewc|inter|{"lr": 1e-05, "lam": 10000.0}|s0 final 0.0596 159.8 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 0.1}|s0 final 0.0394 160.0 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 1}|s0 final 0.0394 222.7 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 10}|s0 final 0.0394 291.8 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 100}|s0 final 0.0394 320.7 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 1000.0}|s0 final 0.0442 335.7 s
+val|B2_ewc|inter|{"lr": 0.0001, "lam": 10000.0}|s0 final 0.0608 339.9 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 0.1}|s0 final 0.0384 323.2 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 1}|s0 final 0.0386 324.9 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 10}|s0 final 0.0388 376.2 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 100}|s0 final 0.0476 438.6 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 1000.0}|s0 final 0.0398 495.3 s
+val|B2_ewc|inter|{"lr": 0.001, "lam": 10000.0}|s0 final 0.0374 444.6 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 0.1}|s0 final 0.0414 493.2 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 1}|s0 final 0.0386 409.3 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 10}|s0 final 0.0388 450.5 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 100}|s0 final 0.0386 688.9 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 1000.0}|s0 final 0.0340 757.2 s
+val|B2_ewc|inter|{"lr": 0.01, "lam": 10000.0}|s0 final 0.0356 482.3 s
+test|B2_ewc|inter|{"lr": 0.0001, "lam": 10000.0}|s0 final 0.0571 671.2 s
+test|B2_ewc|inter|{"lr": 0.0001, "lam": 10000.0}|s1 final 0.0558 444.8 s
+test|B2_ewc|inter|{"lr": 0.0001, "lam": 10000.0}|s2 final 0.0575 359.8 s
+test|B2_ewc|inter|{"lr": 0.0001, "lam": 10000.0}|s3 final 0.0596 444.9 s
+test|B2_ewc|inter|{"lr": 0.0001, "lam": 10000.0}|s4 final 0.0553 451.8 s
+val|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s0 final 0.2476 254.3 s
+val|B3_er200|inter|{"lr": 0.0001, "buffer": 200}|s0 final 0.2348 278.9 s
+val|B3_er200|inter|{"lr": 0.001, "buffer": 200}|s0 final 0.2184 236.1 s
+val|B3_er200|inter|{"lr": 0.01, "buffer": 200}|s0 final 0.1196 223.4 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s0 final 0.2164 215.7 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s1 final 0.2371 118.2 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s2 final 0.2429 123.7 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s3 final 0.2383 113.8 s
+test|B3_er200|inter|{"lr": 1e-05, "buffer": 200}|s4 final 0.2434 104.6 s
+val|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s0 final 0.4318 101.9 s
+val|B3_er1000|inter|{"lr": 0.0001, "buffer": 1000}|s0 final 0.4120 128.5 s
+val|B3_er1000|inter|{"lr": 0.001, "buffer": 1000}|s0 final 0.3976 100.3 s
+val|B3_er1000|inter|{"lr": 0.01, "buffer": 1000}|s0 final 0.2280 85.0 s
+test|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s0 final 0.4239 98.3 s
+test|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s1 final 0.4292 96.3 s
+test|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s2 final 0.4453 96.2 s
+test|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s3 final 0.4215 97.0 s
+test|B3_er1000|inter|{"lr": 1e-05, "buffer": 1000}|s4 final 0.4378 95.4 s
+stage done
+CIFAR_BP_DONE

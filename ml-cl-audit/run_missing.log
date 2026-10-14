@@ -1,0 +1,134 @@
+test|Fly_F0|{}|s3 final 0.7070 21.1 s
+test|Fly_F0|{}|s4 final 0.6985 18.5 s
+val|Fly_F1|{"l": 32, "beta": 0.01}|s0 final 0.7113 13.7 s
+val|Fly_F1|{"l": 32, "beta": 0.05}|s0 final 0.6350 12.9 s
+val|Fly_F1|{"l": 32, "beta": 0.2}|s0 final 0.4622 13.4 s
+val|Fly_F1|{"l": 80, "beta": 0.01}|s0 final 0.7153 13.6 s
+val|Fly_F1|{"l": 80, "beta": 0.05}|s0 final 0.6484 14.9 s
+val|Fly_F1|{"l": 80, "beta": 0.2}|s0 final 0.4464 13.7 s
+val|Fly_F1|{"l": 160, "beta": 0.01}|s0 final 0.7097 14.3 s
+val|Fly_F1|{"l": 160, "beta": 0.05}|s0 final 0.6206 13.5 s
+val|Fly_F1|{"l": 160, "beta": 0.2}|s0 final 0.3993 13.7 s
+val|Fly_F1|{"l": 320, "beta": 0.01}|s0 final 0.6862 15.4 s
+val|Fly_F1|{"l": 320, "beta": 0.05}|s0 final 0.5774 15.1 s
+val|Fly_F1|{"l": 320, "beta": 0.2}|s0 final 0.3229 15.2 s
+test|Fly_F1|{"l": 80, "beta": 0.01}|s0 final 0.7125 19.1 s
+test|Fly_F1|{"l": 80, "beta": 0.01}|s1 final 0.7191 21.1 s
+test|Fly_F1|{"l": 80, "beta": 0.01}|s2 final 0.7177 19.4 s
+test|Fly_F1|{"l": 80, "beta": 0.01}|s3 final 0.7170 19.9 s
+test|Fly_F1|{"l": 80, "beta": 0.01}|s4 final 0.7077 18.8 s
+stage done
+stage done
+stage done
+test|Fly_dense_l2_noclip|{}|s0 final 0.1117 3.9 s
+test|Fly_dense_l2_noclip|{}|s1 final 0.1109 3.8 s
+test|Fly_dense_l2_noclip|{}|s2 final 0.1092 3.7 s
+test|Fly_dense_l2_noclip|{}|s3 final 0.1068 3.9 s
+test|Fly_dense_l2_noclip|{}|s4 final 0.1120 3.9 s
+test|Fly_wta_noclip|{}|s0 final 0.4789 20.8 s
+test|Fly_wta_noclip|{}|s1 final 0.5010 22.2 s
+test|Fly_wta_noclip|{}|s2 final 0.4886 21.6 s
+test|Fly_wta_noclip|{}|s3 final 0.4732 19.8 s
+test|Fly_wta_noclip|{}|s4 final 0.4764 19.1 s
+test|ExpNCM_wta_euc|{}|s0 final 0.6255 21.6 s
+test|ExpNCM_wta_euc|{}|s1 final 0.6254 23.4 s
+test|ExpNCM_wta_euc|{}|s2 final 0.6317 24.9 s
+test|ExpNCM_wta_euc|{}|s3 final 0.6294 24.2 s
+test|ExpNCM_wta_euc|{}|s4 final 0.6301 23.7 s
+test|ExpNCM_wta_cos|{}|s0 final 0.6212 24.1 s
+test|ExpNCM_wta_cos|{}|s1 final 0.6226 24.9 s
+test|ExpNCM_wta_cos|{}|s2 final 0.6267 25.3 s
+test|ExpNCM_wta_cos|{}|s3 final 0.6263 25.4 s
+test|ExpNCM_wta_cos|{}|s4 final 0.6238 25.5 s
+test|ExpNCM_dense_euc|{}|s0 final 0.5920 5.7 s
+test|ExpNCM_dense_euc|{}|s1 final 0.5958 8.1 s
+test|ExpNCM_dense_euc|{}|s2 final 0.5946 7.5 s
+test|ExpNCM_dense_euc|{}|s3 final 0.5959 5.7 s
+test|ExpNCM_dense_euc|{}|s4 final 0.5967 5.8 s
+test|ExpNCM_dense_cos|{}|s0 final 0.5918 7.7 s
+test|ExpNCM_dense_cos|{}|s1 final 0.5957 8.5 s
+test|ExpNCM_dense_cos|{}|s2 final 0.5938 7.3 s
+test|ExpNCM_dense_cos|{}|s3 final 0.5960 6.8 s
+test|ExpNCM_dense_cos|{}|s4 final 0.5969 12.1 s
+stage done
+test|Fly_dense_l2_noclip|{}|s0 final 0.2092 47.5 s
+test|Fly_dense_l2_noclip|{}|s1 final 0.2082 36.1 s
+test|Fly_dense_l2_noclip|{}|s2 final 0.2088 51.9 s
+test|Fly_dense_l2_noclip|{}|s3 final 0.2090 51.4 s
+test|Fly_dense_l2_noclip|{}|s4 final 0.2082 49.2 s
+test|Fly_wta_noclip|{}|s0 final 0.2369 150.2 s
+test|Fly_wta_noclip|{}|s1 final 0.2340 140.2 s
+test|Fly_wta_noclip|{}|s2 final 0.2370 123.9 s
+test|Fly_wta_noclip|{}|s3 final 0.2353 116.3 s
+test|Fly_wta_noclip|{}|s4 final 0.2338 129.5 s
+test|ExpNCM_wta_euc|{}|s0 final 0.2836 144.1 s
+test|ExpNCM_wta_euc|{}|s1 final 0.2825 143.1 s
+test|ExpNCM_wta_euc|{}|s2 final 0.2837 149.3 s
+test|ExpNCM_wta_euc|{}|s3 final 0.2845 162.6 s
+test|ExpNCM_wta_euc|{}|s4 final 0.2820 163.5 s
+test|ExpNCM_wta_cos|{}|s0 final 0.2903 182.3 s
+test|ExpNCM_wta_cos|{}|s1 final 0.2869 157.9 s
+test|ExpNCM_wta_cos|{}|s2 final 0.2910 175.3 s
+test|ExpNCM_wta_cos|{}|s3 final 0.2879 158.1 s
+test|ExpNCM_wta_cos|{}|s4 final 0.2880 149.9 s
+test|ExpNCM_dense_euc|{}|s0 final 0.2652 48.3 s
+test|ExpNCM_dense_euc|{}|s1 final 0.2648 44.2 s
+test|ExpNCM_dense_euc|{}|s2 final 0.2658 49.4 s
+test|ExpNCM_dense_euc|{}|s3 final 0.2671 46.4 s
+test|ExpNCM_dense_euc|{}|s4 final 0.2665 47.5 s
+test|ExpNCM_dense_cos|{}|s0 final 0.2653 63.5 s
+test|ExpNCM_dense_cos|{}|s1 final 0.2646 60.8 s
+test|ExpNCM_dense_cos|{}|s2 final 0.2658 52.3 s
+test|ExpNCM_dense_cos|{}|s3 final 0.2668 47.2 s
+test|ExpNCM_dense_cos|{}|s4 final 0.2666 54.2 s
+stage done
+test|Fly_dense_l2_noclip|{}|s0 final 0.4455 40.9 s
+test|Fly_dense_l2_noclip|{}|s1 final 0.4451 38.0 s
+test|Fly_dense_l2_noclip|{}|s2 final 0.4474 33.7 s
+test|Fly_dense_l2_noclip|{}|s3 final 0.4458 34.5 s
+test|Fly_dense_l2_noclip|{}|s4 final 0.4456 40.1 s
+test|Fly_wta_noclip|{}|s0 final 0.4622 113.7 s
+test|Fly_wta_noclip|{}|s1 final 0.4436 109.1 s
+test|Fly_wta_noclip|{}|s2 final 0.4483 160.9 s
+test|Fly_wta_noclip|{}|s3 final 0.4528 119.4 s
+test|Fly_wta_noclip|{}|s4 final 0.4561 122.4 s
+test|ExpNCM_wta_euc|{}|s0 final 0.5301 142.6 s
+test|ExpNCM_wta_euc|{}|s1 final 0.5208 130.8 s
+test|ExpNCM_wta_euc|{}|s2 final 0.5257 124.5 s
+test|ExpNCM_wta_euc|{}|s3 final 0.5222 161.5 s
+test|ExpNCM_wta_euc|{}|s4 final 0.5297 131.3 s
+test|ExpNCM_wta_cos|{}|s0 final 0.5318 104.2 s
+test|ExpNCM_wta_cos|{}|s1 final 0.5209 120.5 s
+test|ExpNCM_wta_cos|{}|s2 final 0.5249 120.3 s
+test|ExpNCM_wta_cos|{}|s3 final 0.5256 128.8 s
+test|ExpNCM_wta_cos|{}|s4 final 0.5301 123.8 s
+test|ExpNCM_dense_euc|{}|s0 final 0.5338 38.3 s
+test|ExpNCM_dense_euc|{}|s1 final 0.5333 36.4 s
+test|ExpNCM_dense_euc|{}|s2 final 0.5332 34.3 s
+test|ExpNCM_dense_euc|{}|s3 final 0.5326 35.7 s
+test|ExpNCM_dense_euc|{}|s4 final 0.5335 35.0 s
+test|ExpNCM_dense_cos|{}|s0 final 0.5336 46.7 s
+test|ExpNCM_dense_cos|{}|s1 final 0.5331 41.6 s
+test|ExpNCM_dense_cos|{}|s2 final 0.5330 40.1 s
+test|ExpNCM_dense_cos|{}|s3 final 0.5325 39.2 s
+test|ExpNCM_dense_cos|{}|s4 final 0.5334 39.5 s
+stage done
+offline 0 0.8721
+offline 1 0.87185
+offline 2 0.8746
+offline 3 0.8692
+offline 4 0.87015
+stage done
+offline 0 0.4345
+offline 1 0.4342
+offline 2 0.4404
+offline 3 0.4383
+offline 4 0.4378
+stage done
+offline 0 0.6717
+offline 1 0.675
+offline 2 0.6754
+offline 3 0.6846
+offline 4 0.6777
+stage done
+ALL_FAST_STAGES_DONE

@@ -1,0 +1,45 @@
+val|B1_vanilla|{"lr": 0.0001}|s0 final 0.0524 79.8 s
+val|B1_vanilla|{"lr": 0.001}|s0 final 0.0500 85.9 s
+val|B1_vanilla|{"lr": 0.01}|s0 final 0.0500 67.3 s
+test|B1_vanilla|{"lr": 0.0001}|s0 final 0.0527 77.0 s
+test|B1_vanilla|{"lr": 0.0001}|s1 final 0.0529 82.6 s
+test|B1_vanilla|{"lr": 0.0001}|s2 final 0.0508 83.4 s
+test|B1_vanilla|{"lr": 0.0001}|s3 final 0.0527 72.9 s
+test|B1_vanilla|{"lr": 0.0001}|s4 final 0.0524 78.7 s
+val|B2_ewc|{"lr": 0.0001, "lam": 1}|s0 final 0.0531 114.8 s
+val|B2_ewc|{"lr": 0.0001, "lam": 10}|s0 final 0.0517 145.4 s
+val|B2_ewc|{"lr": 0.0001, "lam": 100}|s0 final 0.0500 249.9 s
+val|B2_ewc|{"lr": 0.0001, "lam": 1000.0}|s0 final 0.0500 562.0 s
+val|B2_ewc|{"lr": 0.0001, "lam": 10000.0}|s0 final 0.0500 457.5 s
+val|B2_ewc|{"lr": 0.001, "lam": 1}|s0 final 0.0500 437.5 s
+val|B2_ewc|{"lr": 0.001, "lam": 10}|s0 final 0.0500 73.9 s
+val|B2_ewc|{"lr": 0.001, "lam": 100}|s0 final 0.0500 74.2 s
+val|B2_ewc|{"lr": 0.001, "lam": 1000.0}|s0 final 0.0500 314.9 s
+val|B2_ewc|{"lr": 0.001, "lam": 10000.0}|s0 final 0.0500 156.3 s
+val|B2_ewc|{"lr": 0.01, "lam": 1}|s0 final 0.0500 99.2 s
+val|B2_ewc|{"lr": 0.01, "lam": 10}|s0 final 0.0500 98.0 s
+val|B2_ewc|{"lr": 0.01, "lam": 100}|s0 final 0.0500 86.5 s
+val|B2_ewc|{"lr": 0.01, "lam": 1000.0}|s0 final 0.0500 144.7 s
+val|B2_ewc|{"lr": 0.01, "lam": 10000.0}|s0 final 0.0500 96.8 s
+test|B2_ewc|{"lr": 0.0001, "lam": 1}|s0 final 0.0517 170.4 s
+test|B2_ewc|{"lr": 0.0001, "lam": 1}|s1 final 0.0551 347.2 s
+test|B2_ewc|{"lr": 0.0001, "lam": 1}|s2 final 0.0516 88.0 s
+test|B2_ewc|{"lr": 0.0001, "lam": 1}|s3 final 0.0530 71.6 s
+test|B2_ewc|{"lr": 0.0001, "lam": 1}|s4 final 0.0533 70.7 s
+val|B3_er200|{"lr": 0.0001, "buffer": 200}|s0 final 0.6325 44.2 s
+val|B3_er200|{"lr": 0.001, "buffer": 200}|s0 final 0.5743 42.0 s
+val|B3_er200|{"lr": 0.01, "buffer": 200}|s0 final 0.5220 42.6 s
+test|B3_er200|{"lr": 0.0001, "buffer": 200}|s0 final 0.6355 48.2 s
+test|B3_er200|{"lr": 0.0001, "buffer": 200}|s1 final 0.5929 46.9 s
+test|B3_er200|{"lr": 0.0001, "buffer": 200}|s2 final 0.6128 47.2 s
+test|B3_er200|{"lr": 0.0001, "buffer": 200}|s3 final 0.6371 47.2 s
+test|B3_er200|{"lr": 0.0001, "buffer": 200}|s4 final 0.6336 38.1 s
+val|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s0 final 0.7414 37.4 s
+val|B3_er1000|{"lr": 0.001, "buffer": 1000}|s0 final 0.7258 34.0 s
+val|B3_er1000|{"lr": 0.01, "buffer": 1000}|s0 final 0.6433 32.9 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s0 final 0.7545 40.2 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s1 final 0.7544 38.3 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s2 final 0.7532 40.3 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s3 final 0.7660 39.2 s
+test|B3_er1000|{"lr": 0.0001, "buffer": 1000}|s4 final 0.7554 39.8 s
+stage done

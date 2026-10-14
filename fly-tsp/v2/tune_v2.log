@@ -1,0 +1,23 @@
+R1 refs 0 s
+R1 ACO best (1.0, 8.0, 0.5) 1.78% worst 27.17% 32 s
+R1 ON-real best (lr,kappa) (0.1, 4.0) 1.71% worst 2.05% 109 s
+R1 ON-shuffled best (lr,kappa) (0.03, 2.0) 1.70% worst 2.03% 207 s
+R1 ON-random best (lr,kappa) (0.1, 4.0) 1.73% worst 1.97% 333 s
+R1 ON-linear best (lr,kappa) (0.1, 4.0) 1.64% worst 2.04% 356 s
+R2 refs 385 s
+R2 ACO best (1.0, 8.0, 0.5) 3.12% worst 31.74% 696 s
+R2 ON-real best (lr,kappa) (0.1, 4.0) 2.71% worst 3.21% 996 s
+R2 ON-shuffled best (lr,kappa) (0.1, 4.0) 2.66% worst 3.40% 1265 s
+R2 ON-random best (lr,kappa) (0.03, 8.0) 2.70% worst 3.11% 1511 s
+R2 ON-linear best (lr,kappa) (0.03, 4.0) 3.06% worst 3.88% 1564 s
+R3 refs 1568 s
+R3 ACO best (2.0, 8.0, 0.5) 3.93% worst 18.75% 1598 s
+R3 ON-real best (lr,kappa) (0.1, 8.0) 3.69% worst 4.21% 1680 s
+R3 ON-shuffled best (lr,kappa) (0.03, 8.0) 3.57% worst 4.09% 1769 s
+R3 ON-random best (lr,kappa) (0.01, 4.0) 3.73% worst 4.13% 1861 s
+R3 ON-linear best (lr,kappa) (0.01, 2.0) 3.82% worst 4.24% 1872 s
+R4 refs 1877 s
+R4 ACO best (1.0, 3.0, 0.3) -0.17% worst -0.02% 1915 s
+R4 ON-real best (lr,kappa) (0.03, 4.0) -0.17% worst -0.13% 1969 s
+R4 ON-random best (lr,kappa) (0.1, 8.0) -0.17% worst -0.14% 2029 s
+R4 ON-linear best (lr,kappa) (0.03, 8.0) -0.16% worst -0.14% 2059 s

@@ -1,0 +1,25 @@
+10 s random real 0.02 learn 0.591 forg -0.000
+19 s random real 0.05 learn 0.680 forg 0.028
+30 s random real 0.1 learn 0.736 forg 0.072
+40 s random real 0.2 learn 0.763 forg 0.099
+49 s random real 0.4 learn 0.770 forg 0.109
+59 s random real 0.8 learn 0.775 forg 0.115
+113 s random none 0.02 learn 0.791 forg 0.071
+172 s random none 0.05 learn 0.863 forg 0.127
+209 s random none 0.1 learn 0.885 forg 0.156
+247 s random none 0.2 learn 0.898 forg 0.174
+290 s random none 0.4 learn 0.901 forg 0.182
+336 s random none 0.8 learn 0.903 forg 0.184
+347 s similar real 0.02 learn 0.593 forg 0.003
+358 s similar real 0.05 learn 0.679 forg 0.039
+369 s similar real 0.1 learn 0.728 forg 0.074
+379 s similar real 0.2 learn 0.756 forg 0.104
+389 s similar real 0.4 learn 0.764 forg 0.118
+398 s similar real 0.8 learn 0.767 forg 0.125
+432 s similar none 0.02 learn 0.779 forg 0.066
+468 s similar none 0.05 learn 0.858 forg 0.133
+499 s similar none 0.1 learn 0.888 forg 0.175
+533 s similar none 0.2 learn 0.899 forg 0.197
+567 s similar none 0.4 learn 0.905 forg 0.207
+605 s similar none 0.8 learn 0.907 forg 0.210
+done

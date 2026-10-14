@@ -1,0 +1,16 @@
+16 s sec top5 random 48 real 0.03 learn 0.545 forg 0.009
+33 s sec top5 random 48 real 0.05 learn 0.570 forg 0.016
+55 s sec top5 random 48 real 0.08 learn 0.605 forg 0.032
+71 s sec top5 random 48 real 0.12 learn 0.638 forg 0.044
+94 s sec top5 random 48 real 0.2 learn 0.685 forg 0.064
+113 s sec top5 random 48 real 0.3 learn 0.719 forg 0.083
+147 s sec top5 random 48 real 0.5 learn 0.752 forg 0.095
+172 s sec top5 random 48 real 0.8 learn 0.762 forg 0.101
+209 s sec top5 random 48 none 0.003 learn 0.533 forg 0.006
+242 s sec top5 random 48 none 0.005 learn 0.551 forg 0.011
+280 s sec top5 random 48 none 0.008 learn 0.573 forg 0.014
+321 s sec top5 random 48 none 0.012 learn 0.607 forg 0.030
+366 s sec top5 random 48 none 0.02 learn 0.668 forg 0.062
+428 s sec top5 random 48 none 0.03 learn 0.731 forg 0.093
+491 s sec top5 random 48 none 0.05 learn 0.823 forg 0.146
+done

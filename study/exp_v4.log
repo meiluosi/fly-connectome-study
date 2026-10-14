@@ -1,0 +1,22 @@
+MBON signs: + 25 - 24
+
+== v4 behaviour readout, T=12, 60 paired seeds  [29s]
+  real      learn_acc=0.783 final_acc=0.713 forg_acc=0.070 forg_z=0.251
+  shuffled  learn_acc=0.762 final_acc=0.717 forg_acc=0.044 forg_z=0.177
+  none      learn_acc=0.988 final_acc=0.769 forg_acc=0.219 forg_z=1.821
+  delta     learn_acc=0.995 final_acc=0.909 forg_acc=0.086 forg_z=0.993
+  ewc10     learn_acc=0.995 final_acc=0.909 forg_acc=0.086 forg_z=0.992
+  ewc100    learn_acc=0.995 final_acc=0.910 forg_acc=0.085 forg_z=0.982
+  real-shuffled forg_acc: +0.0258 [+0.0108,+0.0400]
+  real-shuffled forg_z: +0.0742 [+0.0399,+0.1125]
+
+== v4 behaviour readout, T=48, 60 paired seeds  [148s]
+  real      learn_acc=0.772 final_acc=0.616 forg_acc=0.156 forg_z=0.520
+  shuffled  learn_acc=0.753 final_acc=0.615 forg_acc=0.138 forg_z=0.466
+  none      learn_acc=0.986 final_acc=0.587 forg_acc=0.400 forg_z=2.360
+  delta     learn_acc=0.983 final_acc=0.779 forg_acc=0.204 forg_z=0.838
+  ewc10     learn_acc=0.983 final_acc=0.780 forg_acc=0.203 forg_z=0.833
+  ewc100    learn_acc=0.982 final_acc=0.802 forg_acc=0.180 forg_z=0.742
+  real-shuffled forg_acc: +0.0179 [+0.0084,+0.0273]
+  real-shuffled forg_z: +0.0540 [+0.0194,+0.0893]
+done
