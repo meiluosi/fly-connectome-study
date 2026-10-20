@@ -23,3 +23,7 @@ fly-tsp/v3/cache/
 # forget results consolidated in fly-foraging/forget/results_all.json; skills now live in github.com/meiluosi/research-writing-skills
 fly-foraging/forget/results/
 skills/
+fly-v4/data_door/
+fly-v4/odours.npz
+fly-v4/results/
+fly-v4/results_b/
