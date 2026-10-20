@@ -1,0 +1,27 @@
+tuned 761 s
+door_class|global 0.05 {'auc': 0.665}
+door_class|comp_real 0.05 {'auc': 0.659}
+door_class|comp_shuf 0.005 {'auc': 0.581}
+door_class|comp_shufbal 0.02 {'auc': 0.648}
+door_class|unsigned 0.005 {'auc': 0.535}
+door_teacher_real|global 0.05 {'auc': 0.767}
+door_teacher_real|comp_real 0.05 {'auc': 0.739}
+door_teacher_real|comp_shuf 0.02 {'auc': 0.607}
+door_teacher_real|comp_shufbal 0.05 {'auc': 0.711}
+door_teacher_real|unsigned 1.0 {'auc': 0.245}
+linear_teacher|global 0.05 {'auc': 0.658}
+linear_teacher|comp_real 0.02 {'auc': 0.644}
+linear_teacher|comp_shuf 0.02 {'auc': 0.553}
+linear_teacher|comp_shufbal 0.01 {'auc': 0.56}
+linear_teacher|unsigned 0.05 {'auc': 0.511}
+teacher_real|global 0.15 {'auc': 0.756}
+teacher_real|comp_real 0.05 {'auc': 0.688}
+teacher_real|comp_shuf 0.05 {'auc': 0.612}
+teacher_real|comp_shufbal 0.05 {'auc': 0.638}
+teacher_real|unsigned 1.0 {'auc': 0.4}
+cl|global 0.02 {'final': 0.781, 'after': 0.925, 'forgetting': 0.336}
+cl|comp_real 0.05 {'final': 0.829, 'after': 0.896, 'forgetting': 0.159}
+cl|comp_shuf 0.05 {'final': 0.634, 'after': 0.712, 'forgetting': 1.786}
+cl|comp_shufbal 0.01 {'final': 0.693, 'after': 0.78, 'forgetting': 0.306}
+cl|unsigned 0.4 {'final': 0.5, 'after': 0.5, 'forgetting': 0.0}
+cl|global_matched 0.01 {'final': 0.759, 'after': 0.881, 'forgetting': 0.314}

@@ -51,4 +51,5 @@
 - ml-cl-audit/：RESULTS_audit.md、BLOG.md、ASSESSMENT.md、PREREG_audit.md、verification/。
 - fly-foraging/：NOTES.md、RESULTS_forage_eval.md、RESULTS_swarm_eval.md、RESULTS_meta.md、web/index.html（交互页面）。
 - fly-tsp/：PROPOSAL.md、PREREG_tsp.md、RESULTS_tsp.md、NOTES_tsp.md；v2/（PREREG_v2.md、RESULTS_v2.md、NOTES_v2.md、DEVIATIONS_v2.md、verification/）；v3/（PREREG_v3.md、RESULTS_v3.md、NOTES_v3.md、verification/）。
+- **第四阶段 4（效价专门化隔间 + 多巴胺时序规则）：** PAM/PPL1 划分加只抑制的预测误差规则复现了时序造成的记忆符号翻转；样本效率不优于原规则；持续学习的保留优势边缘（+0.044 到 +0.048，区间下界低于 0.03），审查后不能归因到隔间化或真实划分，见 fly-v4/NOTES_v4_stage4.md。觅食环境里的重做未做。
 - fly-v4/：PLAN.md；PREREG_v4_stage0/0b/0c/2.md 与哈希；RESULTS_v4_stage*.md；NOTES_v4_stage*.md（含审查后的更正）；verification/（阶段 0、阶段 2 的独立审查）。DoOR 原始数据（CC BY-SA 4.0）不入库。
