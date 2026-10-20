@@ -24,7 +24,7 @@ def build(side="R"):
     pe=e[e.body_pre.isin(pn.bodyId)&e.body_post.isin(ki)].merge(pn,left_on="body_pre",right_on="bodyId")
     gls=sorted(pe.gl.unique()); gi={g:i for i,g in enumerate(gls)}; P=np.zeros((len(gls),len(kc)))
     for g,b,w in zip(pe.gl,pe.body_post,pe.weight): P[gi[g],ki[b]]+=w
-    c.N,c.Nb,c.M,c.P,c.NK,c.NM,c.NC,c.NG=N,N>0,M,P,len(kc),len(mb),len(comps),len(gls)
+    c.gls=gls; c.N,c.Nb,c.M,c.P,c.NK,c.NM,c.NC,c.NG=N,N>0,M,P,len(kc),len(mb),len(comps),len(gls)
     c.mb=mb; c.kc_ids=kc; c.kc_type=ann.set_index("bodyId").loc[kc].type.astype(str).values; return c
 def odor_fn(c,coding,r,kact=0.05):
     if coding=="random": return lambda:(r.permutation(c.NK)<int(kact*c.NK)).astype(float)

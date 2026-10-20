@@ -19,5 +19,5 @@ def build(side="right"):
     pn=f[f.cell_class.astype(str)=="ALPN"][["root_id","cell_type"]]; pn["gl"]=pn.cell_type.astype(str).str.replace(r"_.*$","",regex=True)
     pe=e[e.pre.isin(pn.root_id)&e.post.isin(ki)].merge(pn,left_on="pre",right_on="root_id"); gls=sorted(pe.gl.unique()); gi={g:i for i,g in enumerate(gls)}; P=np.zeros((len(gls),len(kcid)))
     for g,b,w in zip(pe.gl,pe.post,pe.w): P[gi[g],ki[b]]+=w
-    c.N,c.Nb,c.M,c.P,c.NK,c.NM,c.NC,c.NG=N,N>0,M,P,len(kcid),len(mb),len(comps),len(gls); c.mb=mb; c.kc_ids=kcid; c.kc_type=kc.cell_type.astype(str).values
+    c.gls=gls; c.N,c.Nb,c.M,c.P,c.NK,c.NM,c.NC,c.NG=N,N>0,M,P,len(kcid),len(mb),len(comps),len(gls); c.mb=mb; c.kc_ids=kcid; c.kc_type=kc.cell_type.astype(str).values
     c.signs=np.where(mb.top_nt.values=="acetylcholine",1.0,-1.0); return c
