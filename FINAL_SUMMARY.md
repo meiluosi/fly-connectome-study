@@ -53,4 +53,5 @@
 - fly-tsp/：PROPOSAL.md、PREREG_tsp.md、RESULTS_tsp.md、NOTES_tsp.md；v2/（PREREG_v2.md、RESULTS_v2.md、NOTES_v2.md、DEVIATIONS_v2.md、verification/）；v3/（PREREG_v3.md、RESULTS_v3.md、NOTES_v3.md、verification/）。
 - **第四阶段 4（效价专门化隔间 + 多巴胺时序规则）：** PAM/PPL1 划分加只抑制的预测误差规则复现了时序造成的记忆符号翻转；样本效率不优于原规则；持续学习的保留优势边缘（+0.044 到 +0.048，区间下界低于 0.03），审查后不能归因到隔间化或真实划分，见 fly-v4/NOTES_v4_stage4.md。觅食环境里的重做未做。
 - **第四阶段 5 / 5b（KC 与嗅小球通道的定向病变，借用 WorldSimulationLab 的设计）：** 审查后：沉默高频 KC 的超额损失是编码覆盖的假象（匹配的是 KC 数量，不是有效剂量）；嗅小球通道层面的 hub 效应可由气味通道的活跃度解释，所谓 bridger（参与系数只在 0.50 到 0.65）几乎不是桥接器；真实 − 打乱的对比比较的是不同的通道集合。结论只能是“没有检测到拓扑上的瓶颈”，不是“不存在”。该项目的“级联倍数”在静态前馈图上没有对应物。见 fly-v4/NOTES_v4_stage5.md、NOTES_v4_stage5b.md 及其审查更正。
+- **第四阶段 6（DAN 数据验证与觅食重做）：** 用 MaleCNS 的 DAN→MBON 突触确认了 MBON 到 PAM/PPL1 簇的划分（48/48 一致，但这个检验很弱：簇来自 DAN 的类型名，一致几乎是定义性的；不验证效价）。隔间学习器放进觅食场：窄网格下比原规则差得多（6b）；放宽网格后在 consistent 世界里出现 +8.6 的优势（6c），独立审查发现它来自无界更新（q 变号放大）；有界版本重跑（6d）后，consistent 世界里 comp_real 比原规则低 22.3，conflict 世界无法区分，真实簇划分与重排的划分无法区分。见 fly-v4/NOTES_v4_stage6a.md、NOTES_v4_stage6b.md。
 - fly-v4/：PLAN.md；PREREG_v4_stage0/0b/0c/2.md 与哈希；RESULTS_v4_stage*.md；NOTES_v4_stage*.md（含审查后的更正）；verification/（阶段 0、阶段 2 的独立审查）。DoOR 原始数据（CC BY-SA 4.0）不入库。
