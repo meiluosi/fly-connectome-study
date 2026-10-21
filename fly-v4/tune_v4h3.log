@@ -1,0 +1,9 @@
+tuned 306 s
+consistent|global {'eta': 0.8, 'g_learn': 2.0, 'k_turn': 1.4} 53.5
+consistent|comp_real {'eta': 2.0, 'g_learn': 10.0, 'k_turn': 1.4} 31.9
+consistent|comp_shuf {'eta': 2.0, 'g_learn': 10.0, 'k_turn': 1.4} 30.2
+consistent|comp_shufbal {'eta': 0.4, 'g_learn': 10.0, 'k_turn': 1.4} 29.6
+conflict|global {'eta': 0.4, 'g_learn': 6.0, 'k_turn': 1.4} 43.6
+conflict|comp_real {'eta': 0.8, 'g_learn': 10.0, 'k_turn': 1.4} 35.1
+conflict|comp_shuf {'eta': 4.0, 'g_learn': 6.0, 'k_turn': 1.4} 37.0
+conflict|comp_shufbal {'eta': 2.0, 'g_learn': 3.0, 'k_turn': 1.4} 42.9

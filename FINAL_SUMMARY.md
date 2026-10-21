@@ -52,7 +52,5 @@
 - fly-foraging/：NOTES.md、RESULTS_forage_eval.md、RESULTS_swarm_eval.md、RESULTS_meta.md、web/index.html（交互页面）。
 - fly-tsp/：PROPOSAL.md、PREREG_tsp.md、RESULTS_tsp.md、NOTES_tsp.md；v2/（PREREG_v2.md、RESULTS_v2.md、NOTES_v2.md、DEVIATIONS_v2.md、verification/）；v3/（PREREG_v3.md、RESULTS_v3.md、NOTES_v3.md、verification/）。
 - **第四阶段 4（效价专门化隔间 + 多巴胺时序规则）：** PAM/PPL1 划分加只抑制的预测误差规则复现了时序造成的记忆符号翻转；样本效率不优于原规则；持续学习的保留优势边缘（+0.044 到 +0.048，区间下界低于 0.03），审查后不能归因到隔间化或真实划分，见 fly-v4/NOTES_v4_stage4.md。觅食环境里的重做未做。
-- **第四阶段 5（KC 类别的定向病变，借用 WorldSimulationLab 的设计）：** 训练后沉默高频 KC 比沉默随机 KC 伤得重并随剂量上升（20% 时多损失 4.5 点，40% 时 12.4 点），但从训练开始就不让它们存在没有超额损失，所以不是结构性瓶颈；真实与打乱连线几乎一样。该项目的“级联倍数”在静态前馈图上没有对应物，未使用。见 fly-v4/NOTES_v4_stage5.md。
-- **第四阶段 5b（嗅小球通道的定向病变）：** 5 的借鉴在层面和指标上偏了（KC 层没有 hub 型集中，频率不是桥接性）。换到嗅小球层面后，干净任务上真实连线的 hub 通道有小的超额损失（约 +0.02，低于 0.03），bridger 没有效应；打乱连线下都没有；循环任务上的大效应来自标签依赖同一连线。见 fly-v4/NOTES_v4_stage5b.md。
-- **第四阶段 6（DAN 数据验证与觅食重做）：** 用 MaleCNS 的 DAN→MBON 突触确认了 MBON 到 PAM/PPL1 簇的划分（48/48 一致；只验证归属，不验证效价）。隔间学习器放进觅食场：窄网格下 comp_real 比原规则差得多，宽网格重跑后差距消失（consistent +8.6，conflict −9.3，均为边缘），与重排簇的对照也没有稳定优势。见 fly-v4/NOTES_v4_stage6a.md、NOTES_v4_stage6b.md。
+- **第四阶段 5 / 5b（KC 与嗅小球通道的定向病变，借用 WorldSimulationLab 的设计）：** 审查后：沉默高频 KC 的超额损失是编码覆盖的假象（匹配的是 KC 数量，不是有效剂量）；嗅小球通道层面的 hub 效应可由气味通道的活跃度解释，所谓 bridger（参与系数只在 0.50 到 0.65）几乎不是桥接器；真实 − 打乱的对比比较的是不同的通道集合。结论只能是“没有检测到拓扑上的瓶颈”，不是“不存在”。该项目的“级联倍数”在静态前馈图上没有对应物。见 fly-v4/NOTES_v4_stage5.md、NOTES_v4_stage5b.md 及其审查更正。
 - fly-v4/：PLAN.md；PREREG_v4_stage0/0b/0c/2.md 与哈希；RESULTS_v4_stage*.md；NOTES_v4_stage*.md（含审查后的更正）；verification/（阶段 0、阶段 2 的独立审查）。DoOR 原始数据（CC BY-SA 4.0）不入库。
